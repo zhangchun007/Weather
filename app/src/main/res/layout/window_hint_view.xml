@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="39dp"
+        android:layout_marginRight="39dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:ll_BgColor="@color/white"
+        app:ll_Radius="12dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_protocal_top_bg" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="温馨提示"
+            android:textColor="@color/color_222"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="24dp"
+            android:lineSpacingMultiplier="1.3"
+            android:text="您需要同意服务协议与隐私政策条款的情况下，方可继续使用本产品。"
+            android:textColor="#9296A0"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <com.maiya.thirdlibrary.widget.shapview.ShapeView
+            android:id="@+id/tv_Agree"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="同意并进入"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:bgColor="#379BFF"
+            app:radius="6dp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="仍然拒绝"
+            android:textColor="#BCC3D3"
+            android:textSize="18dp" />
+
+    </com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout>
+</LinearLayout>

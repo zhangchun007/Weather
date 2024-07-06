@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="古镇"
+        android:textSize="14dp"
+        android:textColor="@color/color_333"/>
+
+    <TextView
+        android:id="@+id/air"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/color_333"
+        android:textSize="14dp"/>
+    <com.maiya.thirdlibrary.widget.shapview.ShapeView
+        android:id="@+id/shape_air"
+        android:layout_width="32dp"
+        app:radius="16dp"
+        app:bgColor="#FF44C690"
+        android:textSize="12dp"
+        android:text="优"
+        android:textColor="@color/white"
+        android:layout_marginRight="15dp"
+        android:layout_height="18dp"/>
+
+
+</LinearLayout>

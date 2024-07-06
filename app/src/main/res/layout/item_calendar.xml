@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="4dp"
+    android:background="#fff7f7f7"
+    android:orientation="vertical">
+
+    <com.necer.view.WeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingLeft="8dp"
+        android:paddingTop="7dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="7dp"
+        android:textSize="13dp" />
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        app:BgColor="@color/white">
+
+        <com.necer.calendar.MonthCalendar
+            android:id="@+id/mc_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/white"
+            app:defaultCheckedLunarTextColor="#999999"
+            app:defaultCheckedSolarTextColor="#222222"
+            app:defaultSolarTextColorWeekSixSeven="#BF4543"
+            app:defaultUnCheckedLunarTextColor="#999999"
+            app:defaultUnCheckedSolarTextColor="#222222"
+            app:holidayWorkdayDistanceX="19dp"
+            app:holidayWorkdayDistanceY="16dp"
+            app:holidayWorkdayTextSize="10dp"
+            app:lunarDistance="17dp"
+            app:lunarTextSize="13dp"
+            app:solarTextSize="26dp"
+            app:todayCheckedLunarTextColor="@android:color/white"
+            app:todayCheckedSolarTextColor="@android:color/white"
+            app:todayUnCheckedLunarTextColor="#999999"
+            app:todayUnCheckedSolarTextColor="#222222" />
+    </com.maiya.thirdlibrary.widget.shapview.ShapeRelativeLayout>
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeRelativeLayout
+        android:id="@+id/srl_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:BgColor="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_calendar_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.zhangsheng.shunxin.calendar.wegdit.LunarTextView
+                android:id="@+id/tv_calendar_lunar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D13F3F"
+                android:textSize="31dp"
+                tools:text="@string/app_name"
+                app:fontsPath="fonts/lunar.ttf" />
+
+            <com.zhangsheng.shunxin.calendar.wegdit.SolarTermsTextView
+                android:id="@+id/tv_solar_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:background="@mipmap/icon_solar_term_bg"
+                android:maxEms="1"
+                android:maxLines="2"
+                android:paddingLeft="1dp"
+                android:textColor="#ffffffff"
+                tools:text="@string/app_name"
+                android:textSize="18dp"
+                tools:visibility="visible"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_calendar_gz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_calendar_one"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:text="@string/app_name"
+            android:textColor="#161616"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_calendar_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_calendar_gz"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            tools:text="@string/app_name"
+            android:textColor="#999999"
+            android:textSize="14dp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_calendar_date"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/color_f6f6f6" />
+
+        <LinearLayout
+            android:id="@+id/ll_yiji"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/line"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="9dp"
+                android:gravity="center"
+                android:text="宜"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                app:bgColor="#FF1596E6"
+                app:radius="20dp" />
+
+            <TextView
+                android:id="@+id/tv_yi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="@string/app_name"
+                android:textColor="@color/color_222"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@color/color_f6f6f6" />
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="9dp"
+                android:gravity="center"
+                android:text="忌"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                app:bgColor="#FFE07A35"
+                app:radius="20dp" />
+
+            <TextView
+                android:id="@+id/tv_ji"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="@string/app_name"
+                android:textColor="@color/color_222"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+<!--        <com.maiya.thridlibrary.widget.shapview.ShapeRelativeLayout-->
+<!--            android:id="@+id/rl_calendar_cps"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="53dp"-->
+<!--            android:layout_below="@id/ll_yiji"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:visibility="visible"-->
+<!--            app:BgColor="#fffaf4f4"-->
+<!--            app:Radius="4dp">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_calendar_cps_icon"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:scaleType="centerCrop" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/iv_calendar_cps_title"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignTop="@id/iv_calendar_cps_icon"-->
+<!--                android:layout_marginLeft="14dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:layout_toRightOf="@id/iv_calendar_cps_icon"-->
+<!--                android:ellipsize="end"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:maxLines="1"-->
+<!--                android:text=""-->
+<!--                android:textColor="#ff333333"-->
+<!--                android:textSize="14dp" />-->
+
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignBottom="@id/iv_calendar_cps_icon"-->
+<!--                android:layout_marginLeft="14dp"-->
+<!--                android:layout_toRightOf="@id/iv_calendar_cps_icon"-->
+<!--                android:drawableRight="@mipmap/icon_right_arrows"-->
+<!--                android:drawablePadding="1dp"-->
+<!--                android:text="查看详情"-->
+<!--                android:textColor="#ff999999"-->
+<!--                android:textSize="12dp" />-->
+<!--        </com.maiya.thridlibrary.widget.shapview.ShapeRelativeLayout>-->
+
+    </com.maiya.thirdlibrary.widget.shapview.ShapeRelativeLayout>
+
+</LinearLayout>

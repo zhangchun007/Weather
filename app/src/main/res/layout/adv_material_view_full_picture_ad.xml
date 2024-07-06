@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gdt_container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_full_adv_bg"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/close_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingLeft="20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="32dp"
+                android:paddingRight="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_clean_close"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="24dp">
+                <com.xinmeng.shadow.mediation.display.MediaView
+                    android:id="@+id/adv_media_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/adv_desc_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:textSize="18dp"
+                tools:text="再不领就没了，真不要钱"
+                android:textColor="#4C4C4C"
+                android:textStyle="bold"
+                android:layout_marginTop="64dp"
+                />
+
+            <TextView
+                android:id="@+id/adv_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                tools:text="没过阿斯加德佛阿斯加德佛阿斯顿发生"
+                android:gravity="center"
+                android:textColor="#A4A4A4"
+                android:textSize="16dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:id="@+id/adv_action_view"
+                android:layout_width="276dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="安装"
+                android:layout_marginTop="@dimen/dp_56"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/shape_full_adv_btn"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/adv_icon_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:src="@mipmap/logo"
+        android:layout_gravity="center"
+        />
+</FrameLayout>

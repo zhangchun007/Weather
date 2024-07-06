@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".weather.activity.MoreRainFallActivity">
+
+    <com.maiya.thirdlibrary.widget.TitleBar
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#F4F5F9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="0.5dp"
+        android:background="#F8FBFF"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_12"
+            android:text="日期"
+            android:textColor="#7A7B7F"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_12"
+            android:text="当日天气"
+            android:textColor="#7A7B7F"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="@dimen/dp_12"
+            android:text="当日温度"
+            android:textColor="#7A7B7F"
+            android:textSize="@dimen/dp_14" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.maiya.thirdlibrary.widget.smartlayout.recycleview.SmartRecycleView
+        android:id="@+id/recycle_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:focusable="false"
+        app:LayoutManager="vertical"
+        app:ScrollContol="vertical"
+        app:isScrollChild="true"
+        app:item_layout="@layout/adapter_rain_fall_more_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <LinearLayout
+        android:id="@+id/lin_error_view"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:drawableTop="@mipmap/icon_weather1_qing"
+            android:text="最近天气很好哦~"
+            android:textColor="#9296A0"
+            android:textSize="@dimen/dp_14" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

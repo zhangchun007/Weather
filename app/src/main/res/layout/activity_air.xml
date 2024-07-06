@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.zhangsheng.shunxin.weather.activity.AirActivity">
+
+    <com.maiya.thirdlibrary.widget.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                    android:id="@+id/bg_air"
+                    android:layout_width="match_parent"
+                    android:layout_height="362dp"
+                    app:endColor="#FF57D389"
+                    app:startColor="#FF2FB999" />
+
+                <LinearLayout
+                    android:id="@+id/shape_air"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:gravity="right"
+                        android:text="更新于今天17:17"
+                        android:textColor="#80ffffff"
+                        android:textSize="12dp" />
+
+                    <com.zhangsheng.shunxin.weather.widget.DashBoardView1
+                        android:id="@+id/dbv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp" />
+
+                    <TextView
+                        android:id="@+id/air_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginTop="-20dp"
+                        android:layout_marginRight="34dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_below="@id/shape_air"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="-45dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@drawable/shape_white_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <com.zhangsheng.shunxin.weather.widget.ScrollGridView
+                        android:id="@+id/gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3"
+                        android:verticalSpacing="@dimen/dp_20" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_air_rank"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@drawable/shape_white_bg"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:drawableStart="@mipmap/icon_air_rank"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="全国空气质量排名"
+                    android:textColor="@color/color_333"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/color_333"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/rank_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:drawableRight="@mipmap/icon_next_black"
+                    android:text=""
+                    android:textColor="#FF9296A0"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <com.zhangsheng.shunxin.ad.widget.M2PictureAdStyle
+                android:id="@+id/adv_material_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_air_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@drawable/shape_white_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="10dp"
+                    android:text="未来十五天预报"
+                    android:textColor="@color/color_333"
+                    android:textSize="16dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="#F2F2F2" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_white_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:text="各监测站点实时数据"
+                        android:textColor="@color/color_333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:text="单位：µg/m³"
+                        android:textColor="#9296A0"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <com.zhangsheng.shunxin.weather.widget.MapContainer
+                    android:id="@+id/map_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <com.amap.api.maps.TextureMapView
+                        android:id="@+id/mapview"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/air_color_tint" />
+
+                    <ImageView
+                        android:id="@+id/location"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/shape_radius8_white_bg"
+                        android:scaleType="center"
+                        android:src="@mipmap/icon_location_rain"
+                        android:textSize="11dp" />
+                </com.zhangsheng.shunxin.weather.widget.MapContainer>
+
+                <com.zhangsheng.shunxin.weather.widget.ScrollListView
+                    android:id="@+id/air_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:divider="#FFF4F5F9"
+                    android:dividerHeight="1px" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

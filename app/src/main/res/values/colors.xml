@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#00000000</color>
+    <color name="protocol_content_normal">#9296A0</color>
+    <color name="protocol_content_url">#379BFF</color>
+    <color name="white">#fff</color>
+    <color name="black22_10">#1A222222</color>
+    <color name="divider">#F2F2F2</color>
+    <color name="backgroud">#F2F2F2</color>
+    <color name="color_333">#333</color>
+    <color name="color_15_week">#333</color>
+    <color name="color_999">#999</color>
+    <color name="color_15_date">#999</color>
+    <color name="color_379bff">#379BFF</color>
+    <color name="color_fe5044">#FE5044</color>
+    <color name="color_f2f2f2">#F2F2F2</color>
+    <color name="color_9296A0">#9296A0</color>
+    <color name="color_222">#222</color>
+    <color name="color_f6f6f6">#f6f6f6</color>
+    <color name="transparent">#00000000</color>
+    <color name="tv_gray_light">#9296A0</color>
+    <color name="bg_color">#F2F2F2</color>
+    <color name="color_222222">#222222</color>
+    <color name="color_24_temp">#222222</color>
+    <color name="color_24_wind">#FF9296A0</color>
+    <color name="color_24_time">#FF9296A0</color>
+    <color name="color_24_line">#FFE9EAEF</color>
+    <color name="color_24_now">#333</color>
+
+    <color name="color_15_333">#333</color>
+    <color name="color_15_wind">#FF9296A0</color>
+    <color name="color_15_wind1">#FF9296A0</color>
+    <color name="color_15_week1">#FF222222</color>
+    <color name="color_15_date1">#FF9296A0</color>
+    <color name="color_15_weaher">#FF222222</color>
+    <color name="color_15_hight">#FF222222</color>
+    <color name="color_15_low">#FF222222</color>
+    <color name="color_look_15_color">#379BFF</color>
+    <color name="color_15_weather1">#FF222222</color>
+    <color name="color_15_343434">#FF222222</color>
+
+    <color name="color_life_line">#FFE9EAEF</color>
+    <color name="color_life_state">#333</color>
+    <color name="color_life_name">#999</color>
+
+    <color name="color_076EFA">#076EFA</color>
+    <color name="color_76A6AD">#76A6AD</color>
+    <color name="color_2287F5">#2287F5</color>
+    <color name="color_EAEAEA">#EAEAEA</color>
+    <color name="color_E9EAEF">#E9EAEF</color>
+    <color name="color_BCC3D3">#BCC3D3</color>
+    <color name="color_CC000000">#CC000000</color>
+    <color name="color_F6F6F6">#F6F6F6</color>
+    <color name="color_FFE5E5E5F">#FFE5E5E5</color>
+    <color name="color_AAAAAA">#AAAAAA</color>
+    //信息流频道管理颜色
+    <item name="subscribe_item_text_color_normal" type="color">@color/default_text</item>
+    <color name="subscribe_item_text_color_pressed">#F4F5F9</color>
+    <color name="default_text">#222222</color>
+    <color name="subscribe_item_text_color_pressed_night">#ff303030</color>
+    <color name="subscribe_item_focused_stroke">#ffd9d9d9</color>
+    <color name="subscribe_item_drag_stroke">#ffd2d2d2</color>
+    <color name="subscribe_item_drag_bg">#ffffff</color>
+    <color name="subscribe_item_drag_stroke_night">#ff464646</color>
+    <color name="subscribe_item_drag_bg_night">#ff252525</color>
+    <color name="subscribe_item_selected_bg">#ffffffff</color>
+    <color name="subscribe_item_selected_stroke">#F4F5F9</color>
+    <color name="subscribe_item_disabled_bg">#ffefefef</color>
+    <color name="subscribe_item_disabled_stroke">#ffd9d9d9</color>
+    <color name="subscribe_item_pressed_bg">#fff9f9f9</color>
+    <color name="subscribe_item_pressed_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_normal_bg">#fff5f5f5</color>
+    <color name="subscribe_item_normal_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_focused_bg_night">#ff252525</color>
+    <color name="subscribe_item_focused_stroke_night">#ff464646</color>
+    <color name="subscribe_item_selected_bg_night">#ff252525</color>
+    <color name="subscribe_item_selected_stroke_night">#ffbc494d</color>
+    <color name="subscribe_item_disabled_bg_night">#ff2b2b2b</color>
+
+
+    <color name="_1F1F22">#1F1F22</color>
+    <color name="_eeeeee">#eeeeee</color>
+
+    <color name="color_av_full_scan_white_bg">#22ffffff</color>
+    <color name="_FD412F">#FD412F</color>
+
+    <color name="_ff333333">#ff333333</color>
+    <color name="_666666">#666666</color>
+    <color name="_656565">#656565</color>
+    <color name="_e3e5ed">#e3e5ed</color>
+    <color name="_c5c5c5">#c5c5c5</color>
+    <color name="_222222">#222222</color>
+    <color name="_999999">#999999</color>
+    <color name="_F54643">#F54643</color>
+    <color name="_212121">#212121</color>
+    <color name="_1F80EC">#1F80EC</color>
+
+    <color name="_343FE8">#343FE8</color>
+    <color name="_4852F7">#4852F7</color>
+    <color name="_333333">#ff333333</color>
+    <color name="_24D8F1">#24D8F1</color>
+    <color name="_18AAED">#18AAED</color>
+    <color name="_199BED">#199BED</color>
+    <color name="_0aaff3">#0AAFF3</color>
+    <color name="_e1e4e7">#E1E4E7</color>
+    <color name="_888888">#888888</color>
+    <color name="_c6c6c6">#c6c6c6</color>
+    <color name="_f4f4f4">#f4f4f4</color>
+    <color name="_FF4470">#FF4470</color>
+    <color name="_F6A120">#F6A120</color>
+    <color name="_f0f2f5">#f0f2f5</color>
+    <color name="_80ffffff">#80ffffff</color>
+    <color name="_40000000">#40000000</color>
+    <color name="_6c7379">#6c7379</color>
+    <color name="_f1f1f1">#f1f1f1</color>
+
+    <color name="_E6E6E6">#E6E6E6</color>
+    <color name="bg_video_progress">#b2ffffff</color>
+
+    <color name="_ebecee">#EBECEE</color>
+
+    <color name="adv_main_red">#f44b50</color>
+    <color name="ad_b1_title_color">#222</color>
+    <color name="adv_big_source_color">#A0A0A0</color>
+    <color name="adv_big_desc_color">#A0A0A0</color>
+    <color name="ad_banner_title_color">#ffffff</color>
+    <color name="ad_divider_bg">#FFF4F5F9</color>
+
+    <color name="_24_lineColor">#4EB5F9</color>
+
+    <color name="refresh_error_color">#FFBB2C</color>
+    <color name="color_7A7A7A">#7A7A7A</color>
+    <color name="color_line_dash">#1a222222</color>
+
+
+
+    <color name="color_back_weather">#ffffff</color>
+    <color name="color_tab_temp_weather">#ffffff</color>
+    <color name="color_tab_indicator_selected">#ffffff</color>
+    <color name="color_tab_indicator_unselected">#33ffffff</color>
+
+    <color name="color_refresh_loading_complete">#ffffff</color>
+    <color name="color_blackmodle_refresh_loading_complete">#ffffff</color>
+    <color name="color_ad_bg">#FFF4F5F9</color>
+
+
+
+</resources>

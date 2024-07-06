@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".information.InfoDetails.InfoDetailsActivity">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_info_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:src="@mipmap/icon_dark_back" />
+
+        <ImageView
+            android:id="@+id/iv_clsoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:src="@mipmap/icon_dark_close" />
+
+        <TextView
+            android:id="@+id/tv_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/info_title"
+            android:textColor="@color/color_222222"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/comm_loading_view"
+        android:visibility="visible" />
+
+    <include
+        layout="@layout/info_net_error"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/info_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhangsheng.shunxin.information.InfoDetails.InfoScrollView
+            android:id="@+id/info_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.zhangsheng.shunxin.information.InfoDetails.InfoWebView
+                    android:id="@+id/info_web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#FFFFFF" />
+
+                <LinearLayout
+                    android:id="@+id/info_others_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/ad_line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="#FFF4F5F9"
+                        android:visibility="gone" />
+
+                    <com.maiya.adlibrary.ad.WindowFocusRelativeLayout
+                        android:id="@+id/window_focus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.zhangsheng.shunxin.ad.widget.B2PictureAdMaterialView
+                            android:id="@+id/adv_infodetails_material_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:visibility="gone" />
+                    </com.maiya.adlibrary.ad.WindowFocusRelativeLayout>
+
+                    <View
+                        android:id="@+id/ad_line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="#FFF4F5F9" />
+
+                    <TextView
+                        android:id="@+id/tuijian_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:text="热门推荐"
+                        android:textColor="@color/color_222222"
+                        android:textSize="18dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/color_E9EAEF" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycle_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="#CD853F"
+                        android:dividerHeight="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.zhangsheng.shunxin.information.InfoDetails.InfoScrollView>
+    </FrameLayout>
+
+</LinearLayout>

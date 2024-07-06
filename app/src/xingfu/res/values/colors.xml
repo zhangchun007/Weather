@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#088EFF</color>
+    <color name="colorPrimaryDark">#088EFF</color>
+    <color name="colorAccent">#088EFF</color>
+
+    <color name="ad_banner_title_color">#333</color>
+    <color name="_24_lineColor">#088EFF</color>
+    <color name="color_82878b">#82878B</color>
+
+    <color name="color_24_temp">#333</color>
+    <color name="color_24_wind">#999</color>
+    <color name="color_24_time">#999</color>
+    <color name="color_24_line">#1affffff</color>
+    <color name="color_24_now">#333</color>
+
+    <color name="color_15_333">#333</color>
+    <color name="color_15_week">#999</color>
+    <color name="color_15_date">#999</color>
+    <color name="color_15_wind">#9BA2AA</color>
+
+    <color name="color_15_week1">#9A9A9A</color>
+    <color name="color_15_weather1">#333</color>
+    <color name="color_15_date1">#989898</color>
+    <color name="color_15_wind1">#999</color>
+    <color name="color_15_343434">#343434</color>
+
+    <color name="color_life_line">#00000000</color>
+    <color name="color_life_state">#333</color>
+    <color name="color_life_name">#999</color>
+
+    <color name="refresh_error_color">#fff</color>
+
+<!--    <color name="ad_divider_bg">#00000000</color>-->
+<!--    <color name="ad_b1_title_color">#fff</color>-->
+
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_60"
+    android:background="@android:color/white"
+    android:paddingStart="@dimen/dp_15"
+    android:paddingEnd="@dimen/dp_15">
+
+    <ImageView
+        android:id="@+id/im_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/ic_icon_item_city_delete"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/im_weather"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_50"
+        android:textColor="@color/color_222"
+        android:textSize="@dimen/dp_15"
+        app:layout_constraintBottom_toTopOf="@+id/tv_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="上海" />
+
+    <ImageView
+        android:id="@+id/img_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:src="@mipmap/icon_location"
+        android:tint="@color/color_222"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_city"
+        app:layout_constraintStart_toEndOf="@+id/tv_city"
+        app:layout_constraintTop_toTopOf="@+id/tv_city" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_9296A0"
+        android:textSize="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_city"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city"
+        tools:text="上海" />
+
+    <TextView
+        android:id="@+id/tv_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_222"
+        android:textSize="@dimen/dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="27°/32°" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.maiya.thirdlibrary.widget.shapview.ShapeView
+            android:id="@+id/btn_push"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="center"
+            android:text="设为提醒城市"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_12"
+            app:bgColor="#FFFFA43B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/im_sort"
+            app:layout_constraintTop_toTopOf="parent"
+            app:paddingLeft="8dp"
+            app:paddingRight="8dp"
+            app:radius="@dimen/dp_4"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/im_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_city_sort"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@color/color_f2f2f2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

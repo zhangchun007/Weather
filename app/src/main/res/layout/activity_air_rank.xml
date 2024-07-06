@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    android:layout_height="match_parent"
+    tools:context="com.zhangsheng.shunxin.weather.activity.AirRankActivity">
+
+    <com.maiya.thirdlibrary.widget.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.maiya.thirdlibrary.widget.percentlayout.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="0dp"
+            app:layout_widthPercent="54%"
+            android:layout_height="130dp"
+            android:gravity="right"
+            android:paddingRight="15dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/bg_air_bad"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="空气最差城市"
+                android:textSize="14dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/right_name"
+                android:layout_width="wrap_content"
+                android:text="- -"
+                android:textSize="19dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/right_aqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AQI"
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="12dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/left"
+            android:layout_width="0dp"
+            app:layout_widthPercent="54%"
+            android:layout_height="130dp"
+            android:paddingLeft="15dp"
+            android:background="@mipmap/bg_air_best"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="空气最好城市"
+                android:textSize="14dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/left_name"
+                android:layout_width="wrap_content"
+                android:text="- -"
+                android:textSize="19dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/left_aqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AQI "
+                android:textSize="14dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="12dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_pk"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"/>
+    </com.maiya.thirdlibrary.widget.percentlayout.PercentRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_height="44dp">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:text="排名"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/color_333"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="城市(省份)"
+            android:gravity="center"
+            android:textColor="@color/color_333"
+            android:textSize="16dp"/>
+        <LinearLayout
+            android:id="@+id/sort"
+            android:layout_width="80dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/color_333"
+                android:text="AQI值"/>
+            <ImageView
+                android:id="@+id/image_sort"
+                android:layout_width="wrap_content"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_air_change_sort"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv"
+        android:divider="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

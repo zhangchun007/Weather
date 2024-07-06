@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:id="@+id/mainView"
+    android:layout_width="297dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape8r_white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingRight="@dimen/dp_20">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:gravity="center"
+        android:text="开启存储权限"
+        android:textColor="@color/color_222"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:drawableLeft="@mipmap/im_storage"
+        android:drawablePadding="@dimen/dp_12"
+        android:lineSpacingExtra="5dp"
+        android:textColor="#FFA0A0A0"
+        android:textSize="16dp"
+        tools:text="便于缓存动态天气背景和语音播报等数据，节省流量。" />
+
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeView
+        android:id="@+id/tv_Agree"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="@dimen/dp_24"
+        android:gravity="center"
+        android:text="去开启"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:bgColor="@color/color_379bff"
+        app:radius="4dp" />
+
+    <TextView
+        android:id="@+id/tv_unAgree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_20"
+        android:text="放弃服务"
+        android:textColor="#FFCCCCCC"
+        android:textSize="18dp" />
+
+</LinearLayout>
+</LinearLayout>

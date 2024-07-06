@@ -1,0 +1,158 @@
+{
+  "app": "顺心天气",
+  "update": "20210721",
+  "configs": [
+    {
+      "type": "feed",
+      "pgtype": "newsamllhb",
+      "jrId": "946006877",
+      "jrWeight": "80",
+      "gdtId": "2001272489361478",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "splash",
+      "pgtype": "open",
+      "jrId": "",
+      "jrWeight": "0",
+      "gdtId": "4001075459762289",
+      "gdtWeight": "100"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigkqzlxq",
+      "jrId": "945739897",
+      "jrWeight": "80",
+      "gdtId": "5071856219608071",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "smallsyxt",
+      "jrId": "946026277",
+      "jrWeight": "80",
+      "gdtId": "8071576921929340",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigdrawdrtq",
+      "jrId": "945739920",
+      "jrWeight": "80",
+      "gdtId": "9051859248091539",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigdrawjmxq",
+      "jrId": "945739921",
+      "jrWeight": "80",
+      "gdtId": "5071150268195650",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigrlbottom",
+      "jrId": "945739923",
+      "jrWeight": "80",
+      "gdtId": "3011954288697632",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bighuangli",
+      "jrId": "945739931",
+      "jrWeight": "80",
+      "gdtId": "5051254268695674",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigyjejym",
+      "jrId": "945739934",
+      "jrWeight": "80",
+      "gdtId": "5051253288693699",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigset",
+      "jrId": "945739936",
+      "jrWeight": "80",
+      "gdtId": "2031955238091782",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "biglist11",
+      "jrId": "945739940",
+      "jrWeight": "80",
+      "gdtId": "3021651208694765",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "biglist12",
+      "jrId": "945739943",
+      "jrWeight": "80",
+      "gdtId": "5011759268496759",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "biglist13",
+      "jrId": "945739945",
+      "jrWeight": "80",
+      "gdtId": "1001459218191892",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigxwxq",
+      "jrId": "945739947",
+      "jrWeight": "80",
+      "gdtId": "5091854278195854",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "smallxwxq1",
+      "jrId": "945739908",
+      "jrWeight": "80",
+      "gdtId": "2031554289309268",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigdrawbtshzs2",
+      "jrId": "945739903",
+      "jrWeight": "80",
+      "gdtId": "6071051279900186",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigdrawshzs2",
+      "jrId": "945739906",
+      "jrWeight": "80",
+      "gdtId": "9041856299607290",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "citybottom",
+      "jrId": "946006889",
+      "jrWeight": "80",
+      "gdtId": "6011277449261502",
+      "gdtWeight": "20"
+    },
+    {
+      "type": "feed",
+      "pgtype": "bigtqspxf",
+      "jrId": "946006892",
+      "jrWeight": "80",
+      "gdtId": "5071076489963533",
+      "gdtWeight": "20"
+    }
+  ]
+}

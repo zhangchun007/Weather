@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    >
+
+    <com.maiya.adlibrary.ad.WindowFocusRelativeLayout
+        android:id="@+id/window_focus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.zhangsheng.shunxin.ad.widget.B2PictureAdMaterialView
+            android:id="@+id/adv_material_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+
+    </com.maiya.adlibrary.ad.WindowFocusRelativeLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#E9EAEF"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

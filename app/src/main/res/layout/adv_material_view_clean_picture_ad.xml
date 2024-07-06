@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lin_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape8r_white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/adv_template_render_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adv_custom_render_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/adv_title_bar"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/adv_title_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ad_b1_padding"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/ad_b1_title_color"
+                    android:textSize="18dp"
+                    tools:text="心藏一座湖，沉醉珑玺湾" />
+
+                <ImageView
+                    android:id="@+id/big_picture_ad_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/ad_b1_padding"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingRight="@dimen/ad_b1_padding"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_big_adv_close" />
+            </LinearLayout>
+
+            <com.zhangsheng.shunxin.weather.widget.RoundAngleFrameLayout
+                android:id="@+id/media_frame"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/ad_b1_padding"
+                android:layout_marginRight="@dimen/ad_b1_padding"
+                app:layout_constraintDimensionRatio="h,16:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adv_title_bar"
+                app:radius="@dimen/dp_4">
+
+                <ImageView
+                    android:id="@+id/blurView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/blur_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:background="#1a000000" />
+
+                <com.xinmeng.shadow.mediation.display.MediaView
+                    android:id="@+id/adv_media_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+            </com.zhangsheng.shunxin.weather.widget.RoundAngleFrameLayout>
+
+            <TextView
+                android:id="@+id/adv_desc_view"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/ad_b1_padding"
+                android:paddingRight="@dimen/ad_b1_padding"
+                android:textColor="@color/adv_big_desc_color"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/media_frame"
+                tools:text="tianqi" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</merge>

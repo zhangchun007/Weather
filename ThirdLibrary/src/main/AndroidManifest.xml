@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maiya.thirdlibrary">
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+
+        <meta-data
+            android:name="com.shareinstall.APP_KEY"
+            android:value="${SHAREINSTALL_APP_KEY}" />
+        <!-- 百度定位 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${BAIDU_LBS_API_KEY}" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 高德地图 -->
+        <service
+            android:name="com.amap.api.location.APSService"
+            android:foregroundServiceType="location" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${AMAP_API_KEY}" />
+    </application>
+</manifest>

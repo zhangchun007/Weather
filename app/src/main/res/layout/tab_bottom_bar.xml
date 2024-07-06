@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="-1dp"
+    android:background="#F6F6F6"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tab_weather"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:tag="tab_weather"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/select_tab_bt_weather"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="天气"
+        android:textColor="@drawable/select_tab_tv"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tab_video"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:tag="tab_video"
+        android:drawableTop="@drawable/select_tab_bt_video"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="视频"
+        android:textColor="@drawable/select_tab_tv"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tab_stream"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:tag="tab_stream"
+        android:drawableTop="@drawable/select_tab_bt_hot"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="热点"
+        android:textColor="@drawable/select_tab_tv"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tab_calander"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:tag="tab_calander"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/select_tab_bt_calendar"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="日历"
+        android:textColor="@drawable/select_tab_tv"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tab_setting"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:tag="tab_setting"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/select_tab_bt_setting"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="设置"
+        android:textColor="@drawable/select_tab_tv"
+        android:textSize="@dimen/dp_12" />
+
+</LinearLayout>

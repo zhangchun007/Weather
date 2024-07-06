@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@layout/st_push_notification,
+    @layout/st_push_activity_h5,
+    @layout/st_push_appdownloader_notification_layout,
+    @layout/st_push_layout_title_right_prom,
+    @layout/st_push_notification.xml,
+    @layout/push_expandable_big_image_notification,
+    @layout/push_expandable_big_text_notification,
+    @layout/push_pure_pic_notification,
+    @mipmap/st_push,
+    @mipmap/st_push_small,
+    @drawable/st_push_ic_back,
+    @drawable/st_push_notice_close,
+    @drawable/st_push_notice_down_pause,
+    @drawable/st_push_notice_down_start,
+    @drawable/mz_push_notification_small_icon,@drawable/juhe_*,@layout/juhe_*,@string/juhe_*,@color/juhe_*" />

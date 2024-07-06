@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+    <stroke
+        android:width="@dimen/weather_line_Width"
+    android:color="@color/color_line_dash"
+    android:dashGap="@dimen/weather_dashGap_width"
+    android:dashWidth="@dimen/weather_dashWidth"/>
+</shape>

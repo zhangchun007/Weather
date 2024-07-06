@@ -1,0 +1,180 @@
+apply plugin: 'walle'
+android {
+
+    ndkVersion "22.1.7171670"
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            manifest.srcFile('src/main/AndroidManifest.xml')
+        }
+    }
+
+
+    buildTypes {
+        debug {
+            signingConfig release.signingConfig
+            minifyEnabled false
+            // 开启Zipalign优化
+            zipAlignEnabled false
+            // 移除无用的resource文件，此项只有在开启混淆时才生效
+            shrinkResources false
+            buildConfigField("String", "BUGLY_VERSTION", "\"" + "${gradle.versionName}_dev" + "\"")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', '../AdLibrary/ad-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            // 开启Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件，此项只有在开启混淆时才生效
+            shrinkResources true
+            buildConfigField("String", "BUGLY_VERSTION", "\"" + "${gradle.versionName}_${getBuglyBuildTime()}" + "\"")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', '../AdLibrary/ad-rules.pro'
+        }
+        pre {
+            minifyEnabled true
+            // 开启Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件，此项只有在开启混淆时才生效
+            shrinkResources true
+            buildConfigField("String", "BUGLY_VERSTION", "\"" + "${gradle.versionName}_dev" + "\"")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    signingConfigs {
+        shunxin {
+            storeFile file(rootProject.getRootDir().getAbsolutePath() + "/keys/shunxin.jks")
+            storePassword 'xunyue-88'
+            keyAlias = 'sxweather'
+            keyPassword 'xunyue-88'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        xinqing {
+            storeFile file(rootProject.getRootDir().getAbsolutePath() + "/keys/xinqing.jks")
+            storePassword 'songmengweather'
+            keyAlias = 'smweather'
+            keyPassword 'songmengweather'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        xiangrui {
+            storeFile file(rootProject.getRootDir().getAbsolutePath() + "/keys/xiangrui.jks")
+            storePassword 'xunyue@88'
+            keyAlias = 'x2wweather'
+            keyPassword 'xunyue@88'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        xiangyu {
+            storeFile file(rootProject.getRootDir().getAbsolutePath() + "/keys/xiangyu.jks")
+            storePassword 'xunyue-88'
+            keyAlias = 'amweather'
+            keyPassword 'xunyue-88'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        haomei {
+            storeFile file(rootProject.getRootDir().getAbsolutePath() + "/keys/haomei.txt")
+            storePassword 'wxp77312'
+            keyAlias = 'androidwindows7'
+            keyPassword 'wxp77312'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        xingfu {
+            storeFile file(rootProject.getRootDir().getAbsolutePath() + "/keys/xingfu.jks")
+            storePassword '123456'
+            keyAlias = 'tianqi'
+            keyPassword '123456'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    createProductFlavors(project)
+}
+
+
+String getBuglyBuildTime() {
+    Date date = new Date()
+    return date.format("MMdd")
+}
+
+
+def createProductFlavors(Project app) {
+
+    def flavorname = CHANNEL.toLowerCase()
+    def flavor = app.android.productFlavors.create(flavorname)
+    flavor.applicationId = gradle.applicationId
+    flavor.targetSdkVersion = TARGET_SDK_VERSION
+    switch (flavorname) {
+        case 'shunxin':
+            flavor.signingConfig = app.android.signingConfigs.shunxin
+            app.dependencies.add("implementation", fileTree(dir: "libcontainer/${flavorname}", include: ["*.jar", '*.aar']))
+            break
+        case 'xinqing':
+            flavor.signingConfig = app.android.signingConfigs.xinqing
+            app.dependencies.add("implementation", fileTree(dir: "libcontainer/${flavorname}", include: ["*.jar", '*.aar']))
+            app.dependencies.add("implementation", "com.bytedance.applog:RangersAppLog-All-cn:5.2.5")
+            break
+        case 'xiangrui':
+            flavor.signingConfig = app.android.signingConfigs.xiangrui
+            app.dependencies.add("implementation", fileTree(dir: "libcontainer/${flavorname}", include: ["*.jar", '*.aar']))
+            break
+        case 'haomei':
+            flavor.signingConfig = app.android.signingConfigs.haomei
+            app.dependencies.add("implementation", fileTree(dir: "libcontainer/${flavorname}", include: ["*.jar", '*.aar']))
+            app.dependencies.add("implementation", "com.bytedance.applog:RangersAppLog-All-cn:5.2.5")
+            break
+        case 'xiangyu':
+            flavor.signingConfig = app.android.signingConfigs.xiangyu
+            app.dependencies.add("implementation", fileTree(dir: "libcontainer/${flavorname}", include: ["*.jar", '*.aar']))
+            app.dependencies.add("implementation", "com.bytedance.applog:RangersAppLog-All-cn:5.2.5")
+            break
+        case 'xingfu':
+            flavor.signingConfig = app.android.signingConfigs.xingfu
+            app.dependencies.add("implementation", fileTree(dir: "libcontainer/${flavorname}", include: ["*.jar", '*.aar']))
+            break
+    }
+
+    println("flavor-${flavorname}")
+
+    walle {
+        // 指定渠道包的输出路径
+        apkOutputFolder = new File("${project.buildDir}/outputs/channel/${CHANNEL.toLowerCase()}")
+        // 定制渠道包的APK的文件名称
+        apkFileNameFormat = '${channel}v${versionName}--${buildTime}-${buildType}.apk'
+        // 渠道配置文件
+        configFile = new File("${project.getProjectDir()}/channel/${CHANNEL.toLowerCase()}")
+    }
+    flavor.buildConfigField("String", "AD_DEFAULT_UPDATE", "\"${gradle.AD_DEFAULT_UPDATE}\"")
+    flavor.buildConfigField("String", "BUGLY_APP_ID", "\"${gradle.BUGLY_APP_ID}\"")
+    flavor.buildConfigField("String", "KS_SCENE_POSID", "\"${gradle.KS_SCENE_POSID}\"")
+//    flavor.buildConfigField("String", "APP_NAME", "\"${gradle.APP_NAME}\"")
+    flavor.buildConfigField("String", "APP_TYPE_ID", "\"${gradle.APP_TYPE_ID}\"")
+    flavor.buildConfigField("String", "CSJ_APP_ID", "\"${gradle.CSJ_APP_ID}\"")
+    flavor.buildConfigField("String", "GDT_APP_ID", "\"${gradle.GDT_APP_ID}\"")
+    flavor.buildConfigField("String", "KS_APP_ID", "\"${gradle.KS_APP_ID}\"")
+    flavor.buildConfigField("String", "BD_APP_ID", "\"${gradle.BD_APP_ID}\"")
+    flavor.buildConfigField("String", "APP_QID", "\"${gradle.APP_QID}\"")
+    flavor.buildConfigField("String", "SP_CHANNEL", "\"${gradle.SP_CHANNEL}\"")
+    flavor.buildConfigField("String", "SP_BUGLY_TAG", "\"${gradle.SP_BUGLY_TAG}\"")
+
+    flavor.manifestPlaceholders += [APPLOG_SCHEME: "${gradle.APPLOG_SCHEME}"]
+    flavor.manifestPlaceholders += [STPUSH_APP_KEY: "${gradle.STPUSH_APP_KEY}"]
+    flavor.manifestPlaceholders += [STPUSH_APP_SECRET: "${gradle.STPUSH_APP_SECRET}"]
+    flavor.manifestPlaceholders += [XM_APP_ID: "${gradle.XM_APP_ID}"]
+    flavor.manifestPlaceholders += [XM_APP_KEY: "${gradle.XM_APP_KEY}"]
+    flavor.manifestPlaceholders += [MZ_APP_ID: "${gradle.MZ_APP_ID}"]
+    flavor.manifestPlaceholders += [MZ_APP_KEY: "${gradle.MZ_APP_KEY}"]
+    flavor.manifestPlaceholders += [HW_APP_ID: "${gradle.HW_APP_ID}"]
+    flavor.manifestPlaceholders += [OPPO_APP_KEY: "${gradle.OPPO_APP_KEY}"]
+    flavor.manifestPlaceholders += [OPPO_APP_SECRET: "${gradle.OPPO_APP_SECRET}"]
+    flavor.manifestPlaceholders += [VIVO_APP_ID: "${gradle.VIVO_APP_ID}"]
+    flavor.manifestPlaceholders += [VIVO_APP_KEY: "${gradle.VIVO_APP_KEY}"]
+    flavor.manifestPlaceholders += [AMAP_API_KEY: "${gradle.AMAP_API_KEY}"]
+    flavor.manifestPlaceholders += [BAIDU_LBS_API_KEY: "${gradle.BAIDU_LBS_API_KEY}"]
+    flavor.manifestPlaceholders += [SHAREINSTALL_APP_KEY: "${gradle.SHAREINSTALL_APP_KEY}"]
+}

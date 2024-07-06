@@ -1,0 +1,92 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#379BFF</item>
+        <item name="colorPrimaryDark">#379BFF</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+
+    </style>
+
+    <style name="CustomSeekbarStyle" >
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@color/white</item>
+        <item name="android:progressDrawable">@drawable/seekbar_progress_drawable</item>
+        <item name="android:thumb">@mipmap/icon_seek_bar_thumb</item>
+    </style>
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--沉浸-->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+
+    <string-array name="npv_lunar_year_without_measure_hint">
+        <item>二零一六</item>
+    </string-array>
+    <string-array name="npv_lunar_month_without_measure_hint">
+        <item>十一</item>
+    </string-array>
+    <string-array name="npv_lunar_day_with_measure_hint">
+        <item>初一</item>
+    </string-array>
+
+    <!--控制dialog进出动画-->
+    <style name="dialog_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!-- 进入时的动画 -->
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+    <style name="MyDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="news_TabLayoutTextStyle">
+        <item name="android:textSize">15dp</item>
+    </style>
+    <declare-styleable name="TabLayout"
+        >
+        <attr name="indicatorStartColor" format="color|reference"/>
+        <attr name="indicatorEndColor" format="color|reference"/>
+        <attr name="indicatorMarginStart" format="dimension|reference"/>
+        <attr name="indicatorMarginEnd" format="dimension|reference"/>
+        <attr name="indicatorMarginBottom" format="dimension|reference"/>
+    </declare-styleable>
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+
+    </style>
+
+    <declare-styleable name="RoundAngleFrameLayout">
+        <attr name="radius" format="dimension" />
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="external_root"
+        path="." />
+    <external-files-path
+        name="external_files_path"
+        path="Download" />
+    <files-path
+        name="internal_file_path"
+        path="xm_ad_downloaded" />
+</paths>

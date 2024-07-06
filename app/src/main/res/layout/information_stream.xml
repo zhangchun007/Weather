@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_info_stream"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <FrameLayout
+        android:id="@+id/top_stutas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="true"
+        android:paddingLeft="9dp"
+        android:paddingRight="3dp">
+
+        <com.zhangsheng.shunxin.information.widget.tablayout.TabLayout
+            android:id="@+id/weather_news_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginRight="33dp"
+            android:background="@android:color/white"
+            android:overScrollMode="never"
+            app:indicatorEndColor="#379BFF"
+            app:indicatorMarginEnd="18dp"
+            app:indicatorMarginStart="18dp"
+            app:indicatorStartColor="#379BFF"
+            app:tabIndicatorHeight="2dp"
+            app:tabMaxWidth="0dp"
+            app:tabMinWidth="0dp"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/news_TabLayoutTextStyle"
+            app:tabTextColor="#999999" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="33dp"
+            android:background="@drawable/shape_gradient" />
+
+        <ImageView
+            android:id="@+id/iv_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp_6"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/info_channel_more" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/weather_news_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_EAEAEA" />
+    </FrameLayout>
+
+
+</LinearLayout>

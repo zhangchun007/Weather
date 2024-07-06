@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_24_temp">#333333</color>
+    <color name="color_24_wind">#999999</color>
+    <color name="color_24_line">#ffe8e8e8</color>
+    <color name="color_24_now">#333333</color>
+    <color name="color_24_time">#999999</color>
+
+    <color name="color_line_dash">#ffe8e8e8</color>
+
+    <color name="color_15_week1">#666666</color>
+    <color name="color_15_date1">#999999</color>
+    <color name="color_15_weaher">#333333</color>
+    <color name="color_15_wind">#999999</color>
+    <color name="color_15_hight">#CE393D</color>
+    <color name="color_15_low">#088EFF</color>
+    <color name="color_look_15_color">#44A0FF</color>
+    <color name="color_15_date">#999999</color>
+
+    <color name="color_tomorrow_bg_gray">#f6f6f6</color>
+    <color name="color_back_weather">#2D92FC</color>
+    <color name="color_tab_temp_weather">#222222</color>
+
+    <color name="_24_lineColor">#088EFF</color>
+
+    <color name="color_tab_indicator_selected">#222222</color>
+    <color name="color_tab_indicator_unselected">#66222222</color>
+
+    <color name="color_tab_xinqing_indicator_selected">#ffffff</color>
+    <color name="color_tab_xinqing_indicator_unselected">#33ffffff</color>
+
+    <color name="color_refresh_loading_complete">#222222</color>
+    <color name="color_blackmodle_refresh_loading_complete">#ffffff</color>
+    <color name="refresh_error_color">#222222</color>
+    <color name="ad_divider_bg">#F7F7F7</color>
+    <color name="color_ad_bg">#F7F7F7</color>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="8dp">
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="test"
+        android:textSize="18dp"
+        android:textColor="@color/color_222222"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+        <ImageView
+            android:id="@+id/iv_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="192dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_info_default"
+            android:background="@drawable/rect_solid_white_border_corner_5"
+           />
+
+        <TextView
+        android:id="@+id/tv_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="刚刚 东方头条"
+        android:textSize="12dp"
+        android:textColor="@color/color_9296A0"
+        />
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_E9EAEF" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_video_play"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/shap_radius30_stroke_blue_hollow_gray"
+        />
+</FrameLayout>

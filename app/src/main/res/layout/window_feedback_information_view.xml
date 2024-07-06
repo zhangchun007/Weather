@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_35"
+        android:paddingEnd="@dimen/dp_35">
+
+        <ImageView
+            android:id="@+id/im"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/im_feedback" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_update_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rel01"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:background="@drawable/shape_f2f2f2_bg"
+                android:paddingEnd="@dimen/dp_15">
+
+                <TextView
+                    android:id="@+id/tv01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="定位城市位置不准确"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/dp_15" />
+
+                <ImageView
+                    android:id="@+id/im01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_im_checkbox"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel02"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:background="@drawable/shape_f2f2f2_bg"
+                android:paddingEnd="@dimen/dp_15">
+
+                <TextView
+                    android:id="@+id/tv02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="城市天气数据不准确"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/dp_15" />
+
+                <ImageView
+                    android:id="@+id/im02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_im_checkbox"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel03"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:background="@drawable/shape_f2f2f2_bg"
+                android:paddingEnd="@dimen/dp_15">
+
+                <TextView
+                    android:id="@+id/tv03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="未找到想要的城市"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/dp_15" />
+
+                <EditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入你想要的城市"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:paddingStart="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333"
+                    android:textColorHint="@color/color_999"
+                    android:textSize="@dimen/dp_15"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel04"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:background="@drawable/shape_f2f2f2_bg"
+                android:paddingEnd="@dimen/dp_15">
+
+                <TextView
+                    android:id="@+id/tv04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="其他问题"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/dp_15" />
+
+                <EditText
+                    android:id="@+id/et_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="问题描述"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:paddingStart="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333"
+                    android:textColorHint="@color/color_999"
+                    android:textSize="@dimen/dp_15"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_25"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginStart="@dimen/dp_25"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_999_sbg"
+                    android:gravity="center"
+                    android:text="取消上报"
+                    android:textColor="@color/color_999"
+                    android:textSize="@dimen/dp_17" />
+
+                <TextView
+                    android:id="@+id/tv_feedback"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_25"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_solid_97daff_border_corner_24"
+                    android:gravity="center"
+                    android:text="立即上报"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dp_17" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center">
+
+        <RadioGroup
+            android:id="@+id/rg_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_gregorian"
+                android:layout_width="56dp"
+                android:layout_height="28dp"
+                android:background="@drawable/selector_lt_lb_radius_red_black"
+                android:button="@null"
+                android:gravity="center"
+                android:text="公历"
+                android:textColor="@drawable/selector_red_black"
+                android:textSize="15dp" />
+
+            <RadioButton
+                android:id="@+id/rb_lunar"
+                android:layout_width="56dp"
+                android:layout_height="28dp"
+                android:background="@drawable/selector_rt_rb_radius_red_black"
+                android:button="@null"
+                android:gravity="center"
+                android:text="农历"
+                android:textColor="@drawable/selector_red_black"
+                android:textSize="15dp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <com.zhangsheng.shunxin.calendar.wegdit.view.GregorianLunarCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_marginBottom="1dp"
+        android:background="#F7F7F7"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        app:glcv_GregorianThemeColor="#323232"
+        app:glcv_LunarThemeColor="#323232"
+        app:glcv_NormalTextColor="#747474"
+        app:glcv_NormalTextColorTwo="#B2B2B2"
+        app:glcv_ScrollAnimation="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="取消"
+            android:textSize="15dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#EEEEEE" />
+
+        <TextView
+            android:id="@+id/button_get_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="确定"
+            android:textColor="#BF4543"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

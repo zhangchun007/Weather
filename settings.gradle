@@ -1,0 +1,112 @@
+//代码引用属性的字符串处理方式
+static def dealCodeProperties(Properties properties, String property) {
+    return "${properties.getProperty(property)}"
+}
+
+
+//属性的boolean值得处理方式
+static def dealPropertiesToBool(Properties properties, String property) {
+    return properties.getProperty(property).toBoolean()
+}
+
+def initConfig() {
+    Properties properties = new Properties()
+
+
+    String fileName = "/buildconfig/${CHANNEL.toLowerCase()}.properties"
+    File propertyFile = new File(rootDir.getAbsolutePath(), fileName)
+    properties.load(propertyFile.newDataInputStream())
+
+    if (FROM_JENKINS.toBoolean()) {
+        gradle.ext.versionName = VERSION_NAME
+
+        gradle.ext.BUGLY_VERSION = BUGLY_VERSION
+
+        gradle.ext.versionCode = VERSION_CODE
+    } else {
+        gradle.ext.versionName = dealCodeProperties(properties, "VERSION_NAME")
+
+        gradle.ext.BUGLY_VERSION = dealCodeProperties(properties, "BUGLY_VERSION")
+
+        gradle.ext.versionCode = dealCodeProperties(properties, "VERSION_CODE")
+    }
+
+    println "目前是发布：${CHANNEL} " +
+            "\n 是否是Jenkins->${FROM_JENKINS} " +
+            "\n  versionName->${gradle.versionName} " +
+            "\n  BUGLY_VERSION->${gradle.BUGLY_VERSION} " +
+            "\n  versionCode->${gradle.versionCode}"+
+            "\n  FROM_JENKINS->${FROM_JENKINS==false}"
+
+
+    gradle.ext.IS_CSJ_VIDEO_TRACKER = dealCodeProperties(properties, "IS_CSJ_VIDEO_TRACKER")
+
+    gradle.ext.AD_DEFAULT_UPDATE=dealCodeProperties(properties, "AD_DEFAULT_UPDATE")
+
+
+    gradle.ext.applicationId = dealCodeProperties(properties, "APPLICATION_ID")
+
+//    gradle.ext.APP_NAME=dealCodeProperties(properties,"APP_NAME")
+
+    gradle.ext.APP_QID = dealCodeProperties(properties, "APP_QID")
+
+    gradle.ext.APPLOG_SCHEME = dealCodeProperties(properties, "APPLOG_SCHEME")
+
+    gradle.ext.STPUSH_APP_KEY = dealCodeProperties(properties, "STPUSH_APP_KEY")
+
+    gradle.ext.STPUSH_APP_SECRET = dealCodeProperties(properties, "STPUSH_APP_SECRET")
+
+    gradle.ext.XM_APP_ID = dealCodeProperties(properties, "XM_APP_ID")
+
+    gradle.ext.XM_APP_KEY = dealCodeProperties(properties, "XM_APP_KEY")
+
+    gradle.ext.MZ_APP_ID = dealCodeProperties(properties, "MZ_APP_ID")
+
+    gradle.ext.MZ_APP_KEY = dealCodeProperties(properties, "MZ_APP_KEY")
+
+    gradle.ext.HW_APP_ID = dealCodeProperties(properties, "HW_APP_ID")
+
+    gradle.ext.OPPO_APP_KEY = dealCodeProperties(properties, "OPPO_APP_KEY")
+
+    gradle.ext.OPPO_APP_SECRET = dealCodeProperties(properties, "OPPO_APP_SECRET")
+
+    gradle.ext.VIVO_APP_ID = dealCodeProperties(properties, "VIVO_APP_ID")
+
+    gradle.ext.VIVO_APP_KEY = dealCodeProperties(properties, "VIVO_APP_KEY")
+
+    gradle.ext.BUGLY_APP_ID = dealCodeProperties(properties, "BUGLY_APP_ID")
+
+    gradle.ext.KS_SCENE_POSID = dealCodeProperties(properties, "KS_SCENE_POSID")
+
+    gradle.ext.APP_TYPE_ID = dealCodeProperties(properties, "APP_TYPE_ID")
+
+    gradle.ext.CSJ_APP_ID = dealCodeProperties(properties, "CSJ_APP_ID")
+
+    gradle.ext.GDT_APP_ID = dealCodeProperties(properties, "GDT_APP_ID")
+
+    gradle.ext.KS_APP_ID = dealCodeProperties(properties, "KS_APP_ID")
+
+    gradle.ext.BD_APP_ID = dealCodeProperties(properties, "BD_APP_ID")
+
+    gradle.ext.AMAP_API_KEY = dealCodeProperties(properties, "AMAP_API_KEY")
+
+    gradle.ext.BAIDU_LBS_API_KEY = dealCodeProperties(properties, "BAIDU_LBS_API_KEY")
+
+    gradle.ext.SHAREINSTALL_APP_KEY = dealCodeProperties(properties, "SHAREINSTALL_APP_KEY")
+
+    gradle.ext.SP_CHANNEL = dealCodeProperties(properties, "SP_CHANNEL")
+
+    gradle.ext.SP_BUGLY_TAG = dealCodeProperties(properties,"SP_BUGLY_TAG")
+
+}
+
+initConfig()
+
+
+include ':CalendarLibrary'
+include ':ThirdLibrary'
+include ':AdLibrary'
+include ':app'
+rootProject.name = "马甲包天气"
+
+

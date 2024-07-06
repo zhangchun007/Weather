@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/adv_custom_render_container"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_2">
+
+        <ImageView
+            android:id="@+id/adv_small_pic_close"
+            android:src="@mipmap/icon_ad_close"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/dp_5"
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"/>
+        <FrameLayout
+            android:id="@+id/adImageContainer"
+            android:layout_width="56dp"
+            android:background="@drawable/shape_r12_white"
+            android:layout_below="@id/adv_small_pic_close"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_height="56dp">
+            <com.xinmeng.shadow.mediation.view.RoundImageView
+                android:id="@+id/adv_icon_view"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                app:cornerRadius="12dp"
+                android:layout_height="56dp" />
+            <com.xinmeng.shadow.mediation.display.MediaView
+                android:id="@+id/adv_media_view"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+            <com.zhangsheng.shunxin.weather.widget.circleimage.NiceImageView
+                android:id="@+id/adv_label_s3"
+                android:layout_width="@dimen/dp_23"
+                android:layout_height="@dimen/dp_8"
+                android:layout_gravity="right|bottom"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</merge>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_12"
+    android:background="@drawable/forty_calendar_widget_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/img_arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:visibility="gone"
+                android:src="@mipmap/img_arrow_left"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_arrow_left"
+                android:text="2021年4月"
+                android:textColor="#000000"
+                android:textSize="18dp"></TextView>
+
+            <ImageView
+                android:id="@+id/img_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/tv_date"
+                android:src="@mipmap/img_arrow_right"></ImageView>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvBackToday"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="23dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/back_today_unselect_bg"
+            android:gravity="center"
+            android:text="回今天"
+            android:textColor="#aaaaaa"
+            android:textSize="13dp"></TextView>
+
+    </RelativeLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_calender"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_below="@+id/rl_title"
+        android:overScrollMode="never"></androidx.viewpager.widget.ViewPager>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vp_calender"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp">
+
+        <ImageView
+            android:id="@+id/img_dot_one"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@mipmap/img_calendar_dot_select"></ImageView>
+
+        <ImageView
+            android:id="@+id/img_dot_two"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_dot_one"
+            android:src="@mipmap/img_calendar_dot_unselect"></ImageView>
+        <ImageView
+            android:id="@+id/img_dot_three"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/img_dot_two"
+            android:src="@mipmap/img_calendar_dot_unselect"></ImageView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

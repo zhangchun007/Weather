@@ -1,0 +1,25 @@
+{
+  "app":"相雨天气",
+  "update": "20210721",
+  "configs": [
+    {"type":"feed","pgtype":"newsamllhb","jrId":945745303,"jrWeight":80,"gdtId":8071956313022961,"gdtWeight":20},
+    {"type":"feed","pgtype":"bigkqzlxq","jrId":945745817,"jrWeight":80,"gdtId":3061558353251393,"gdtWeight":20},
+    {"type":"feed","pgtype":"smallsyxt","jrId":946124696,"jrWeight":80,"gdtId":1041788842082444,"gdtWeight":20},
+    {"type":"feed","pgtype":"bigdrawdrtq","jrId":945745530,"jrWeight":80,"gdtId":8071254323247289,"gdtWeight":20},
+    {"type":"feed","pgtype":"bigdrawjmxq","jrId":945745734,"jrWeight":80,"gdtId":2071859363141376,"gdtWeight":20},
+    {"type":"feed","pgtype":"bigrlbottom","jrId":946125431,"jrWeight":80,"gdtId":7061187893349897,"gdtWeight":20},
+    {"type":"feed","pgtype":"bighuangli","jrId":946125471,"jrWeight":80,"gdtId":7081680883251024,"gdtWeight":20},
+    {"type":"feed","pgtype":"bigyjejym","jrId":946125503,"jrWeight":80,"gdtId":5041981893856147,"gdtWeight":20},
+    {"type":"feed","pgtype":"bigset","jrId":946125519,"jrWeight":80,"gdtId":4091482853358229,"gdtWeight":20},
+    {"type":"feed","pgtype":"biglist11","jrId":945745744,"jrWeight":80,"gdtId":"","gdtWeight":20},
+    {"type":"feed","pgtype":"biglist12","jrId":945745758,"jrWeight":80,"gdtId":"","gdtWeight":20},
+    {"type":"feed","pgtype":"biglist13","jrId":945745777,"jrWeight":80,"gdtId":"","gdtWeight":20},
+    {"type":"feed","pgtype":"bigxwxq","jrId":945745806,"jrWeight":80,"gdtId":"","gdtWeight":20},
+    {"type":"feed","pgtype":"smallxwxq1","jrId":946124730,"jrWeight":80,"gdtId":"","gdtWeight":20},
+    {"type":"feed","pgtype":"bigdrawbtshzs2","jrId":945745922,"jrWeight":80,"gdtId":7051556353566485,"gdtWeight":20},
+    {"type":"feed","pgtype":"bigdrawshzs2","jrId":945745939,"jrWeight":80,"gdtId":1011558323960569,"gdtWeight":20},
+    {"type":"feed","pgtype":"citybottom","jrId":946124751,"jrWeight":80,"gdtId":3041989882781533,"gdtWeight":20},
+    {"type":"feed","pgtype":"bigtqspxf","jrId":946124763,"jrWeight":80,"gdtId":6051086862586508,"gdtWeight":20},
+    {"type":"splash","pgtype":"open","jrId":"","jrWeight":0,"gdtId":3041755333229265,"gdtWeight":100}
+    ]
+}

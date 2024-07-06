@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.maiya.thirdlibrary.widget.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/push_permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/open_notify"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_weight="1"
+                android:text="接受推送通知"
+                android:textColor="#222"
+                android:textSize="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/account_safe"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:drawableRight="@mipmap/icon_gray_next_big"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="17dp"
+                android:paddingRight="@dimen/dp_16"
+                android:text="已关闭"
+                android:textColor="#FF9296A0"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/divider"
+            android:orientation="vertical">
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:id="@+id/btn_open_notify"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="允许通知，及开启天气提醒"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:bgColor="#FF2BB5FF"
+                app:radius="@dimen/dp_4" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_6">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="定时提醒"
+            android:textColor="#222"
+            android:textSize="@dimen/dp_16" />
+
+        <com.maiya.thirdlibrary.widget.SwitchButton
+            android:id="@+id/cb_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sb_background="#EAEAEA"
+            app:sb_border_width="0dp"
+            app:sb_checked_color="#2BB5FF"
+            app:sb_shadow_radius="8dp"
+            app:sb_show_indicator="false"
+            app:sb_uncheckcircle_width="0dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_day_time"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="早间提醒时间"
+            android:textColor="#222"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/day_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_gray_next_big"
+            android:drawablePadding="12dp"
+            android:gravity="center"
+            android:text="7:00"
+            android:textColor="#9296A0"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divider" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_6">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="定时提醒"
+            android:textColor="#222"
+            android:textSize="@dimen/dp_16" />
+
+        <com.maiya.thirdlibrary.widget.SwitchButton
+            android:id="@+id/cb_night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sb_background="#EAEAEA"
+            app:sb_border_width="0dp"
+            app:sb_checked_color="#2BB5FF"
+            app:sb_shadow_radius="8dp"
+            app:sb_show_indicator="false"
+            app:sb_uncheckcircle_width="0dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_night_time"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="晚间提醒时间"
+            android:textColor="#222"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/night_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_gray_next_big"
+            android:drawablePadding="12dp"
+            android:gravity="center"
+            android:text="18:30"
+            android:textColor="#9296A0"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divider" />
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">幸福天气</string>
+    <string name="comm_refresh_tips" translatable="false">为您更新了%1$s条新内容</string>
+    <string name="info_title">天气资讯</string>
+    <string name="has_set_remind">已设提醒城市</string>
+    <string name="set_remind">设为提醒城市</string>
+    <string name="wallpaper_name">幸福天气</string>
+
+    <string name="weather_voice_too_low">当前音量低，请及时调整音量！</string>
+    <string name="speak_app_title">幸福天气为您播报</string>
+</resources>

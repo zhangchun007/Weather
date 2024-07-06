@@ -1,0 +1,54 @@
+{"tab_list":[
+  {
+    "code": "__all__",
+    "title": "推荐",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_hot",
+    "title": "热点",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_local",
+    "title": "本地",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_health",
+    "title": "健康",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_entertainment",
+    "title": "娱乐",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_baby",
+    "title": "育儿",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_society",
+    "title": "社会",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_regimen",
+    "title": "养生",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_edu",
+    "title": "教育",
+    "isSubscribe" : 1
+  },
+  {
+    "code": "news_culture",
+    "title": "人文",
+    "isSubscribe" : 1
+  }
+]
+
+}

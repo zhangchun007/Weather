@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/news_recommends_refresh_tips"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#D2E7FD"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:text="下拉刷新"
+        android:textColor="#2287F5"
+        android:textSize="16dp" />
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/smart_refresh_layout"
+        android:background="@color/white">
+
+
+    <com.zhangsheng.shunxin.information.refresh.InfoRefreshHeader
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_info_stream_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_no_network"
+            android:descendantFocusability="afterDescendants"
+            android:visibility="visible">
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_recommends_recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#CD853F"
+                android:dividerHeight="2dp"
+                android:scrollbars="vertical"
+                android:focusable="false"/>
+
+
+        </RelativeLayout>
+
+        <!--        无数据-->
+        <!--        无网络 -->
+        <!--        加载层.-->
+
+        <include layout="@layout/info_net_error"
+            android:visibility="gone"/>
+        <include
+            android:id="@+id/no_more_data_view"
+            layout="@layout/no_nore_data_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_recommends_recycle_view"
+            android:visibility="gone"
+            />
+        <include layout="@layout/comm_loading_view"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <com.zhangsheng.shunxin.information.refresh.InfoRefreshFooter
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

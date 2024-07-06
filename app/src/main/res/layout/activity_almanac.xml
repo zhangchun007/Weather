@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/calendar_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#D13F3F" />
+
+    <include
+        android:id="@+id/almanac_title"
+        layout="@layout/toolbar_almanac" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="18dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/icon_almanac_bg_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/icon_almanac_bg_left"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.zhangsheng.shunxin.calendar.wegdit.LunarTextView
+                    android:id="@+id/tv_almanac_lunar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="腊月十六"
+                    android:textColor="#D13F3F"
+                    android:textSize="32dp"
+                    app:fontsPath="fonts/lunar.ttf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.zhangsheng.shunxin.calendar.wegdit.SolarTermsTextView
+                    android:id="@+id/tv_almanac_solar_term"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@mipmap/icon_solar_term_bg"
+                    android:maxEms="1"
+                    android:maxLines="2"
+                    android:paddingLeft="1dp"
+                    android:text=""
+                    android:textColor="#ffffffff"
+                    android:textSize="18dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_almanac_lunar"
+                    app:layout_constraintStart_toEndOf="@+id/tv_almanac_lunar"
+                    app:layout_constraintTop_toTopOf="@+id/tv_almanac_lunar" />
+
+                <ImageButton
+                    android:id="@+id/button_date_down"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@null"
+                    android:scaleType="center"
+                    android:src="@mipmap/icon_almanac_right"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_almanac_lunar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_almanac_lunar" />
+
+                <ImageButton
+                    android:id="@+id/button_date_up"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:scaleType="center"
+                    android:src="@mipmap/icon_almanac_left"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_almanac_lunar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_almanac_lunar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_almanac_lunar">
+
+                    <TextView
+                        android:id="@+id/tv_almanac_lunar_cn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="庚子鼠年 庚子月 庚子日"
+                        android:textColor="#ff999999"
+                        android:textSize="15dp" />
+
+                    <View
+                        android:id="@+id/v_almanac_hs"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#ff999999" />
+
+                    <TextView
+                        android:id="@+id/tv_almanac_hs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="三九第2天"
+                        android:textColor="#ffd4a474"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginTop="-40dp"
+                android:layout_marginRight="@dimen/dp_6"
+                android:background="@drawable/shape_white_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@mipmap/icon_calendar_yi" />
+
+                    <TextView
+                        android:id="@+id/tv_almanac_yi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginRight="15dp"
+                        android:lineSpacingExtra="8dp"
+                        android:textColor="#333333"
+                        android:textSize="15dp"
+                        tools:text="签订合同 签订合同 签订合同 签订合同 签订合同 签订合同 签订合同" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#F3EDE5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@mipmap/icon_calendar_ji" />
+
+                    <TextView
+                        android:id="@+id/tv_almanac_ji"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginRight="15dp"
+                        android:lineSpacingExtra="8dp"
+                        android:textColor="#333333"
+                        android:textSize="15dp"
+                        tools:text="签订合同 签订合同 签订合同 签订合同 签订合同 签订合同 签订合同" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/almanac_item"
+                layout="@layout/item_almanac" />
+
+
+            <com.zhangsheng.shunxin.ad.widget.B2PictureAdMaterialView
+                android:id="@+id/adv_material_view"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_12"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

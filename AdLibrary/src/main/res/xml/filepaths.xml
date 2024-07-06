@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <external-path
+        name="ext_root"
+        path="/" /> <!--3、对应外部内存卡根目录：Environment.getExternalStorageDirectory() https://blog.csdn.net/chxc_yy/article/details/81536875-->
+    <files-path
+        name="nameFilesDir"
+        path="/" /> <!--物理路径相当于Context.getFilesDir() -->
+    <cache-path
+        name="nameCacheDir"
+        path="/" /> <!--//物理路径相当于Context.getCacheDir() -->
+    <external-files-path
+        name="externalFilesDir"
+        path="/" /> <!--//物理路径相当于Context.getExternalFilesDir(String)-->
+    <external-cache-path
+        name="externalCacheDir"
+        path="/" /> <!--//物理路径相当于Context.getExternalCacheDir() -->
+
+    <root-path
+        path=""
+        name="sdcard_path" />    <!-- 支持外部sd卡目录-->
+    <!-- gdt sdk -->
+    <external-cache-path
+        name="gdt_sdk_download_path1"
+        path="com_qq_e_download" />
+    <cache-path
+        name="gdt_sdk_download_path2"
+        path="com_qq_e_download" />
+</paths>

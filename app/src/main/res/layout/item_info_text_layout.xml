@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    android:id="@+id/ll_item">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textColor="@color/color_222222"
+        android:textSize="18dp"
+        android:ellipsize="end"
+        tools:text="testtesttesttesttesttttest" />
+
+    <TextView
+        android:id="@+id/tv_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_9296A0"
+        android:textSize="12dp"
+        tools:text="刚刚 东方头条"
+        android:layout_marginTop="5dp"
+        />
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_E9EAEF" />
+</LinearLayout>

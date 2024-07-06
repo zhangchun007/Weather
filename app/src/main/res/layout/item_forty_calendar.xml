@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp">
+
+    <TextView
+        android:id="@+id/tv_yinli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textColor="#222222"
+        android:textSize="18dp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_nongli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_yinli"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textColor="#AAAAAA"
+        android:textSize="11dp"></TextView>
+
+    <ImageView
+        android:id="@+id/img_weather"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_nongli"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_5"
+        android:src="@mipmap/icon_weather_baoxue"
+        android:visibility="gone"></ImageView>
+
+</RelativeLayout>

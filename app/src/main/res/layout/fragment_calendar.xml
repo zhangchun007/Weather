@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/calendar_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#D13F3F" />
+
+    <include
+        android:id="@+id/calendar_toolbar"
+        layout="@layout/toolbar_calendar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhangsheng.shunxin.calendar.wegdit.CustomCalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.zhangsheng.shunxin.ad.widget.B2PictureAdMaterialView
+                android:id="@+id/adv_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

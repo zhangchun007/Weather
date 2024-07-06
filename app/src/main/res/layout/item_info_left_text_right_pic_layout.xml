@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    android:id="@+id/ll_item">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textColor="@color/color_222222"
+            android:textSize="18dp"
+            android:ellipsize="end"
+            tools:text="testtesttesttesttesttesttesttesttesttest" />
+
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_9296A0"
+            android:textSize="12dp"
+            tools:text="刚刚 东方头条"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_right_cover_image"
+        android:layout_width="114dp"
+        android:layout_height="64dp"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_info_default"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_E9EAEF" />
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape8r_weather_remind_top_bg"
+            android:paddingBottom="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_49"
+                android:gravity="center"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/im_close"
+                android:layout_width="@dimen/dp_49"
+                android:layout_height="@dimen/dp_49"
+                android:padding="@dimen/dp_13"
+                android:src="@mipmap/im_remind_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/_eeeeee"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <ImageView
+                android:id="@+id/im_location"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_17"
+                android:src="@mipmap/im_remind_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_location_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2"
+                android:text="浦东新区"
+                android:textColor="#B4B4B4"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/im_location"
+                app:layout_constraintStart_toEndOf="@+id/im_location"
+                app:layout_constraintTop_toTopOf="@+id/im_location" />
+
+            <ImageView
+                android:id="@+id/im_weather_icon"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_14"
+                android:src="@mipmap/icon_weather_duoyun_day"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location_name" />
+
+            <TextView
+                android:id="@+id/tv_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_22"
+                android:text="多云"
+                android:textColor="@color/_333333"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="@+id/im_weather_icon"
+                app:layout_constraintTop_toBottomOf="@+id/im_weather_icon" />
+
+            <TextView
+                android:id="@+id/tv_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:text="-29°/-23°"
+                android:textColor="#4190FF"
+                android:textSize="@dimen/dp_30"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/im_weather_icon" />
+
+            <TextView
+                android:id="@+id/tv_wind_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:drawableEnd="@mipmap/im_remind_wind_speed"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="东南风4级"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/im_weather_icon" />
+
+            <TextView
+                android:id="@+id/tv_ari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:drawableEnd="@mipmap/im_remind_air"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="空气质量优"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wind_speed" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/im_weather_remind_line" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/shape8r_weather_remind_bottom_bg" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

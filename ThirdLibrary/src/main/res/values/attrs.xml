@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShapeView">
+
+        <!--  矩形（rectangle）、椭圆形(oval)、线(line)、环形(ring)-->
+        <attr name="shape">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+        <attr name="mediumBold" format="boolean"/>
+        <attr name="innerRadius" format="dimension" />
+        <attr name="thickness" format="dimension" />
+        <attr name="IsPress" format="boolean" />
+        <!--nomal 圆角-->
+        <attr name="radius" format="dimension" />
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+        <attr name="textCenter" format="boolean" />
+        <attr name="bgColor" format="color" />
+        <!--渐变-->
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+        <attr name="centerColor" format="color" />
+        <!--当angle=0时，渐变色是从左向右。 然后逆时针方向转，当angle=90时为从下往上。angle必须为45的整数倍-->
+        <attr name="gradientOrientation">
+            <enum name="BL_TR" value="0" />
+            <enum name="BOTTOM_TOP" value="1" />
+            <enum name="BR_TL" value="2" />
+            <enum name="LEFT_RIGHT" value="3" />
+            <enum name="RIGHT_LEFT" value="4" />
+            <enum name="TL_BR" value="5" />
+            <enum name="TOP_BOTTOM" value="6" />
+            <enum name="TR_BL" value="7" />
+        </attr>
+        <attr name="angle_type">
+            <enum name="linear" value="0" /><!--线性渐变-->
+            <enum name="radial" value="1" /><!--放射性渐变，以开始色为中心-->
+            <enum name="sweep" value="2" /><!--扫描线式的渐变-->
+        </attr>
+        <attr name="centerX" format="float" /><!--渐变中心X点坐标的相对位置-->
+        <attr name="centerY" format="float" /><!--渐变中心Y点坐标的相对位置-->
+
+        <!--边框-->
+        <attr name="stroke" format="dimension" />
+        <attr name="strokeColor" format="color" />
+        <attr name="paddingLeft" format="dimension" />
+        <attr name="paddingRight" format="dimension" />
+        <attr name="paddingTop" format="dimension" />
+        <attr name="paddingBottom" format="dimension" />
+        <attr name="dashWidth" format="dimension" />
+        <attr name="dashGap" format="dimension" />
+
+        <attr name="elevations" format="dimension" />
+        <attr name="isRipple" format="boolean" />
+        <!--设置颜色变化值-->
+        <attr name="parameter" format="float" />
+        <attr name="pressedColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ShapeLinearLayout">
+        <!--  矩形（rectangle）、椭圆形(oval)、线(line)、环形(ring)-->
+        <attr name="ll_shapes">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+
+        <attr name="ll_isPress" format="boolean" />
+        <!--  只有在android:shape="ring时可用
+                innerRadius 内环的半径
+                thickness 环的厚度
+        -->
+        <attr name="ll_InnerRadius" format="dimension" />
+        <attr name="ll_Thickness" format="dimension" />
+        <!--nomal 圆角-->
+        <attr name="ll_Radius" format="dimension" />
+        <attr name="ll_TopLeftRadius" format="dimension" />
+        <attr name="ll_TopRightRadius" format="dimension" />
+        <attr name="ll_BottomLeftRadius" format="dimension" />
+        <attr name="ll_BottomRightRadius" format="dimension" />
+        <attr name="ll_BgColor" format="color" />
+        <!--渐变-->
+        <attr name="ll_StartColor" format="color" />
+        <attr name="ll_EndColor" format="color" />
+        <attr name="ll_CenterColor" format="color" />
+        <!--当angle=0时，渐变色是从左向右。 然后逆时针方向转，当angle=90时为从下往上。angle必须为45的整数倍-->
+        <attr name="ll_GradientOrientation">
+            <enum name="BL_TR" value="0" />
+            <enum name="BOTTOM_TOP" value="1" />
+            <enum name="BR_TL" value="2" />
+            <enum name="LEFT_RIGHT" value="3" />
+            <enum name="RIGHT_LEFT" value="4" />
+            <enum name="TL_BR" value="5" />
+            <enum name="TOP_BOTTOM" value="6" />
+            <enum name="TR_BL" value="7" />
+        </attr>
+        <attr name="ll_Angle_type">
+            <enum name="Linear" value="0" /><!--线性渐变-->
+            <enum name="Radial" value="1" /><!--放射性渐变，以开始色为中心-->
+            <enum name="Sweep" value="2" /><!--扫描线式的渐变-->
+        </attr>
+        <attr name="ll_CenterX" format="float" /><!--渐变中心X点坐标的相对位置-->
+        <attr name="ll_CenterY" format="float" /><!--渐变中心Y点坐标的相对位置-->
+
+        <!--边框-->
+        <attr name="ll_Stroke" format="dimension" />
+        <attr name="ll_StrokeColor" format="color" />
+        <attr name="ll_PaddingLeft" format="dimension" />
+        <attr name="ll_PaddingRight" format="dimension" />
+        <attr name="ll_PaddingTop" format="dimension" />
+        <attr name="ll_PaddingBottom" format="dimension" />
+        <attr name="ll_DashWidth" format="dimension" />
+        <attr name="ll_DashGap" format="dimension" />
+
+        <attr name="ll_Elevations" format="dimension" />
+        <attr name="ll_IsRipple" format="boolean" />
+        <!--设置颜色变化值-->
+        <attr name="ll_Parameter" format="float" />
+        <attr name="ll_PressedColor" format="color" />
+    </declare-styleable>
+
+
+
+
+
+
+
+
+    <declare-styleable name="ShapeRelativeLayout">
+        <!--  矩形（rectangle）、椭圆形(oval)、线(line)、环形(ring)-->
+        <attr name="shapes">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+
+        <attr name="isPress" format="boolean" />
+        <!--  只有在android:shape="ring时可用
+                innerRadius 内环的半径
+                thickness 环的厚度
+        -->
+        <attr name="InnerRadius" format="dimension" />
+        <attr name="Thickness" format="dimension" />
+        <!--nomal 圆角-->
+        <attr name="Radius" format="dimension" />
+        <attr name="TopLeftRadius" format="dimension" />
+        <attr name="TopRightRadius" format="dimension" />
+        <attr name="BottomLeftRadius" format="dimension" />
+        <attr name="BottomRightRadius" format="dimension" />
+        <attr name="BgColor" format="color" />
+        <!--渐变-->
+        <attr name="StartColor" format="color" />
+        <attr name="EndColor" format="color" />
+        <attr name="CenterColor" format="color" />
+        <!--当angle=0时，渐变色是从左向右。 然后逆时针方向转，当angle=90时为从下往上。angle必须为45的整数倍-->
+        <attr name="GradientOrientation">
+            <enum name="BL_TR" value="0" />
+            <enum name="BOTTOM_TOP" value="1" />
+            <enum name="BR_TL" value="2" />
+            <enum name="LEFT_RIGHT" value="3" />
+            <enum name="RIGHT_LEFT" value="4" />
+            <enum name="TL_BR" value="5" />
+            <enum name="TOP_BOTTOM" value="6" />
+            <enum name="TR_BL" value="7" />
+        </attr>
+        <attr name="Angle_type">
+            <enum name="Linear" value="0" /><!--线性渐变-->
+            <enum name="Radial" value="1" /><!--放射性渐变，以开始色为中心-->
+            <enum name="Sweep" value="2" /><!--扫描线式的渐变-->
+        </attr>
+        <attr name="CenterX" format="float" /><!--渐变中心X点坐标的相对位置-->
+        <attr name="CenterY" format="float" /><!--渐变中心Y点坐标的相对位置-->
+
+        <!--边框-->
+        <attr name="Stroke" format="dimension" />
+        <attr name="StrokeColor" format="color" />
+        <attr name="PaddingLeft" format="dimension" />
+        <attr name="PaddingRight" format="dimension" />
+        <attr name="PaddingTop" format="dimension" />
+        <attr name="PaddingBottom" format="dimension" />
+        <attr name="DashWidth" format="dimension" />
+        <attr name="DashGap" format="dimension" />
+
+        <attr name="Elevations" format="dimension" />
+        <attr name="IsRipple" format="boolean" />
+        <!--设置颜色变化值-->
+        <attr name="Parameter" format="float" />
+        <attr name="PressedColor" format="color" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="PercentLayout_Layout">
+        <attr name="layout_widthPercent" format="string" />
+        <attr name="layout_heightPercent" format="string" />
+
+        <attr name="layout_marginPercent" format="string" />
+        <attr name="layout_marginLeftPercent" format="string" />
+        <attr name="layout_marginTopPercent" format="string" />
+        <attr name="layout_marginRightPercent" format="string" />
+        <attr name="layout_marginBottomPercent" format="string" />
+        <attr name="layout_marginStartPercent" format="string" />
+        <attr name="layout_marginEndPercent" format="string" />
+
+        <attr name="layout_textSizePercent" format="string" />
+
+        <attr name="layout_maxWidthPercent" format="string" />
+        <attr name="layout_maxHeightPercent" format="string" />
+        <attr name="layout_minWidthPercent" format="string" />
+        <attr name="layout_minHeightPercent" format="string" />
+
+        <attr name="layout_paddingPercent" format="string" />
+        <attr name="layout_paddingTopPercent" format="string" />
+        <attr name="layout_paddingBottomPercent" format="string" />
+        <attr name="layout_paddingLeftPercent" format="string" />
+        <attr name="layout_paddingRightPercent" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SmartRecycleView">
+        <attr name="LayoutManager">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+            <enum name="vertical_waterfall" value="2" />
+            <enum name="vertical_grid" value="3"/>
+            <enum name="horizontal_grid" value="4"/>
+            <enum name="horizontal_waterfall" value="5" />
+            <enum name="scroll_center_layout" value="6"/>
+        </attr>
+        <attr name="ScrollContol">
+            <enum name="none" value="0"/>
+            <enum name="horizontal" value="1"/>
+            <enum name="vertical" value="2"/>
+        </attr>
+        <attr name="item_count" format="integer"/>
+        <attr name="vertical_divider" format="reference"/>
+        <attr name="horizontal_divider" format="reference"/>
+        <attr name="isScrollChild" format="boolean"/>
+        <attr name="item_layout" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ClearEditText">
+        <attr name="clear_rightDrawable" format="reference|integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="sb_shadow_radius" format="reference|dimension"/>
+        <attr name="sb_shadow_offset" format="reference|dimension"/>
+        <attr name="sb_shadow_color" format="reference|color"/>
+        <attr name="sb_uncheck_color" format="reference|color"/>
+        <attr name="sb_checked_color" format="reference|color"/>
+
+        <attr name="sb_border_width" format="reference|dimension"/>
+        <attr name="sb_checkline_color" format="reference|color"/>
+        <attr name="sb_checkline_width" format="reference|dimension"/>
+        <attr name="sb_uncheckcircle_color" format="reference|color"/>
+        <attr name="sb_uncheckcircle_width" format="reference|dimension"/>
+        <attr name="sb_uncheckcircle_radius" format="reference|dimension"/>
+
+        <attr name="sb_checked" format="reference|boolean"/>
+        <attr name="sb_shadow_effect" format="reference|boolean"/>
+        <attr name="sb_effect_duration" format="reference|integer"/>
+        <attr name="sb_button_color" format="reference|color"/>
+        <attr name="sb_show_indicator" format="reference|boolean"/>
+        <attr name="sb_background" format="reference|color"/>
+        <attr name="sb_enable_effect" format="reference|boolean"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/shape_white_bg"
+        android:layout_height="200dp">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            tools:src="@mipmap/im_location_success" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在定位，请稍后..."
+            android:textColor="@color/color_379bff"
+            android:textSize="@dimen/dp_16" />
+    </LinearLayout>
+
+
+</LinearLayout>

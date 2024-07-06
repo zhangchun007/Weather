@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.maiya.adlibrary">
+
+
+    <!--保活start-->
+    <instrumentation
+        android:name="com.xyz.sdk.e.keeplive.daemon.component.DaemonInstrumentation"
+        android:targetPackage="${applicationId}"
+        android:targetProcesses="${applicationId},${applicationId}:resident,${applicationId}:daemon,${applicationId}:assist1,${applicationId}:assist2" />
+
+    <application >
+
+        <provider
+            android:name="com.xinmeng.xm.XMFileProvider"
+            android:authorities="${applicationId}.XMFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/xm_file_path" />
+        </provider>
+        <provider
+            android:name="com.alive.impl.LeoricContentProvider"
+            android:authorities="${applicationId}.leoric.data"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+<!--        百度广告联盟配置-->
+        <provider
+            android:name="com.baidu.mobads.sdk.api.BdFileProvider"
+            android:authorities="${applicationId}.bd.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/bd_file_path" />
+        </provider>
+
+        <!--        广点通广告配置-->
+        <activity
+            android:name="com.qq.e.ads.LandscapeADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            tools:replace="android:screenOrientation"/>
+        <activity
+            android:name="com.qq.e.ads.PortraitADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <service
+            android:name="com.qq.e.comm.DownloadService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.qq.e.ads.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/icon_smart_surface"
+            android:label="@string/smart_surface_activity"
+            android:multiprocess="true"
+            android:taskAffinity="com.moke.android" />
+<!--        穿山甲广告配置-->
+        <provider
+            android:name="com.bykv.vk.openvk.TTFileProvider"
+            android:authorities="${applicationId}.TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/csj_file_path" />
+        </provider>
+
+        <provider
+            android:name="com.bykv.vk.openvk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+<!--        风行-->
+
+<!--        <provider-->
+<!--            android:name="com.funshion.video.util.FSFileProvider"-->
+<!--            android:authorities="${applicationId}.funadsdk.provider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/funshion_file_path" />-->
+<!--        </provider>-->
+    </application>
+</manifest>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:ll_CenterColor="#000000"
+        app:ll_EndColor="#00F4F5F9"
+        app:ll_StartColor="#00F4F5F9">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昨天"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/dp_13" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="12/01"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/dp_13" />
+
+        <com.maiya.thirdlibrary.widget.shapview.ShapeView
+            android:id="@+id/air_color"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_11"
+            app:radius="@dimen/dp_32" />
+    </com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout>
+</LinearLayout>

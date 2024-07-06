@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_9">9dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_11">11dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_19">19dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_21">21dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_23">23dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_27">27dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_29">29dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_31">31dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_33">33dp</dimen>
+    <dimen name="dp_34">34dp</dimen>
+    <dimen name="dp_35">35dp</dimen>
+    <dimen name="dp_38">38dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_44">44dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_47">47dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_49">49dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_55">55dp</dimen>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_65">65dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_78">78dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_85">85dp</dimen>
+    <dimen name="dp_90">90dp</dimen>
+    <dimen name="dp_92">92dp</dimen>
+    <dimen name="dp_110">110dp</dimen>
+    <dimen name="dp_165">165dp</dimen>
+    <dimen name="dp_184">184dp</dimen>
+    <dimen name="dp_250">250dp</dimen>
+    <dimen name="dp_450">450dp</dimen>
+    <dimen name="sp_12">12dp</dimen>
+    <dimen name="sp_14">14dp</dimen>
+    <dimen name="sp_15">15dp</dimen>
+    <dimen name="sp_16">16dp</dimen>
+    <dimen name="sp_17">17dp</dimen>
+    <dimen name="sp_18">18dp</dimen>
+
+
+    <dimen name="ad_b1_padding">16dp</dimen>
+    <dimen name="adv_m1_margin_top">8dp</dimen>
+    <dimen name="adv_m1_margin_bottom">8dp</dimen>
+    <dimen name="ad_m1_padding">16dp</dimen>
+    <dimen name="ad_banner_tv_padding">8dp</dimen>
+    <dimen name="ad_banner_text_size">16dp</dimen>
+
+
+    <dimen name="dp_24_temp">18dp</dimen>
+    <dimen name="dp_24_weather">17dp</dimen>
+    <dimen name="dp_24_wind">15dp</dimen>
+    <dimen name="dp_24_wind_level">14dp</dimen>
+    <dimen name="dp_24_weather_icon">30dp</dimen>
+
+
+    <dimen name="dp_15_week1">15dp</dimen>
+    <dimen name="dp_15_date1">14dp</dimen>
+    <dimen name="dp_15_weather">17dp</dimen>
+    <dimen name="dp_15_hight_low">18dp</dimen>
+    <dimen name="dp_15_weather_icon">30dp</dimen>
+    <dimen name="dp_15_wind">15dp</dimen>
+    <dimen name="dp_15_wind_level">14dp</dimen>
+
+    <dimen name="dp_15_date_list">13dp</dimen>
+    <dimen name="dp_15_weather_icon_dis">30dp</dimen>
+    <dimen name="dp_15_list_tv_weather">15dp</dimen>
+    <dimen name="dp_15_list_tv_weather_num">18dp</dimen>
+
+    <dimen name="dp_life_icon">43dp</dimen>
+
+    <dimen name="tab_item_width">12dp</dimen>
+    <dimen name="tab_item_icon">4dp</dimen>
+    <dimen name="life_item_divider_margin">19dp</dimen>
+    <dimen name="info_top_bar_height">52dp</dimen>
+
+
+    <dimen name="refresh_text_size">11dp</dimen>
+    <dimen name="refresh_icon_size">12dp</dimen>
+    <dimen name="refresh_margin_parent_left">3dp</dimen>
+    <dimen name="refresh_icon_margin_left">7dp</dimen>
+
+    <dimen name="weather_dashGap_width">4dp</dimen>
+    <dimen name="weather_dashWidth">6dp</dimen>
+    <dimen name="weather_line_Width">1dp</dimen>
+    <dimen name="ad_divider">3dp</dimen>
+</resources>

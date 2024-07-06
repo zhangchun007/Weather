@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/rel_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_adv_banner_bg">
+
+        <FrameLayout
+            android:id="@+id/adv_template_render_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/adv_custom_render_container"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_4">
+
+                <com.xinmeng.shadow.mediation.view.RoundImageView
+                    android:id="@+id/adv_icon_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cornerRadius="12dp" />
+
+                <com.xinmeng.shadow.mediation.display.MediaView
+                    android:id="@+id/adv_media_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <com.zhangsheng.shunxin.weather.widget.circleimage.NiceImageView
+                    android:id="@+id/label_s1"
+                    android:layout_width="@dimen/dp_23"
+                    android:layout_height="@dimen/dp_8"
+                    android:layout_gravity="right|bottom" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/adv_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ad_banner_tv_padding"
+                android:layout_marginRight="@dimen/ad_banner_tv_padding"
+                android:layout_toRightOf="@id/frame"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:textColor="@color/ad_banner_title_color"
+                android:textSize="@dimen/ad_banner_text_size"
+                tools:text="心藏一座湖，沉醉珑玺湾" />
+
+            <ImageView
+                android:id="@+id/banner_ad_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_adv_banner_close" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</merge>

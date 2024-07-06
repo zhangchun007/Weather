@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">顺心天气</string>
+    <string name="comm_refresh_tips" translatable="false">为您更新了%1$s条新内容</string>
+    <string name="info_title">顺心资讯</string>
+
+    <string name="weather_voice_too_low">当前音量低，请及时调整音量！</string>
+    <string name="speak_app_title">顺心天气为您播报</string>
+    <string name="weahter_15_day_line">"#FFFF8000"</string>
+    <string name="weahter_15_night_line">"#FF2287F5"</string>
+
+    <string name="notification_permission_content">实时降雨提醒，不再错过\n恶劣天气变化，提前知晓</string>
+
+    <string name="feedback">问题反馈</string>
+
+</resources>

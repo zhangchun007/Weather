@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/rel_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_bg">
+
+        <FrameLayout
+            android:id="@+id/adv_template_render_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adv_custom_render_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/adv_m1_margin_top"
+            android:layout_marginBottom="@dimen/adv_m1_margin_bottom"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.zhangsheng.shunxin.weather.widget.RoundAngleFrameLayout
+                android:id="@+id/adImageContainer"
+                android:layout_width="170dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/ad_m1_padding"
+                app:layout_constraintDimensionRatio="h,16:9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:radius="@dimen/dp_4">
+
+                <ImageView
+                    android:id="@+id/blurView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/blur_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:background="#1a000000" />
+
+                <com.xinmeng.shadow.mediation.display.MediaView
+                    android:id="@+id/adv_media_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/middle_style_s2_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="@dimen/dp_6"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_ad_close_trans_black" />
+            </com.zhangsheng.shunxin.weather.widget.RoundAngleFrameLayout>
+
+            <TextView
+                android:id="@+id/adv_title_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="@dimen/ad_b1_padding"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/ad_b1_title_color"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/adImageContainer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/adv_desc_view"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="13.5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingLeft="11dp"
+                android:paddingRight="14dp"
+                android:textColor="#9296A0"
+                android:textSize="11dp"
+                app:layout_constraintBottom_toBottomOf="@+id/adImageContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/adImageContainer"
+                tools:text="广告来源" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</merge>

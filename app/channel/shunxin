@@ -1,0 +1,19 @@
+
+{
+  "channelInfoList": [{
+      "channel": "sxtqgf1",
+      "alias": "顺心官方渠道",
+      "extraInfo": {
+      "time": null,
+      "checkTime": null,
+      "buildTime":null,
+      "tab_weather":null,
+      "tab_stream":null,
+      "tab_video":null,
+      "tab_calander":null,
+      "tab_setting":null,
+      "ctl_ad":null,
+      "wallpaper":"1"
+      }
+    }]
+}

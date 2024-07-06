@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zhangsheng.shunxin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+
+    <permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".weather.app.App"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".weather.activity.MoreRainFallActivity"></activity>
+        <activity
+            android:name=".weather.activity.AdSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.AirMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.TyphoonActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".weather.notifycation.WidgetBroadcast"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".weather.activity.BebugActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.PushSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.AirRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.AirActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.WeatherVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.WeatherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.WeatherMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.FifWeatherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.HighAlertActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.City2ndActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.CityListManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".calendar.activity.CalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".calendar.activity.AlmanacActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.activity.FortyWeatherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".information.InfoDetails.InfoDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".weather.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".weather.activity.CitySelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- 推送 -->
+        <service android:name=".weather.service.PushService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.zhangsheng.shunxin.weather.activity.City2ndActivity">
+
+    <com.maiya.thirdlibrary.widget.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="21dp"
+        android:text=""
+        android:textColor="#222222"
+        android:textSize="18dp" />
+
+    <GridView
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="13dp"
+        android:horizontalSpacing="11dp"
+        android:layout_marginBottom="10dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="11dp" />
+</LinearLayout>

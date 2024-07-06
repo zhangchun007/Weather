@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: 'jenkinsBuild.gradle'
+apply plugin: 'com.xyz.sdk.plugin'
+
+if (gradle.IS_CSJ_VIDEO_TRACKER=='true'){
+    apply plugin: 'com.bytedance.std.tracker'
+}
+
+kapt {
+    generateStubs = true
+}
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId gradle.applicationId
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode gradle.versionCode.toInteger()
+        versionName gradle.versionName
+
+        flavorDimensions "versionCode"
+        multiDexEnabled true
+
+        buildConfigField("String", "BUILD_TIME", getBuildTime())
+        buildConfigField("int", "CONTROL_TIME", CONTROL_TIME)
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+String getBuildTime() {
+    Date date = new Date()
+    return "\"" + date.format("yyyy-MM-dd HH:mm:ss") + "\""
+}
+
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", '*.aar'])
+    implementation project(path: ':AdLibrary')
+    implementation project(path: ':ThirdLibrary')
+    implementation project(path: ':CalendarLibrary')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'com.google.android.material:material:1.2.1'
+
+    kapt "androidx.room:room-compiler:2.2.6"
+
+    //Leak
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+}
+
+configurations.all {
+    resolutionStrategy {
+        //不使用maven库缓存
+//        cacheDynamicVersionsFor 0, 'seconds'
+        cacheChangingModulesFor 0, 'seconds'
+    }
+}

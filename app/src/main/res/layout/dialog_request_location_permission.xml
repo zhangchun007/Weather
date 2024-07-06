@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="39dp"
+        android:layout_marginRight="39dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_request_location_permission_top" />
+
+        <com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:ll_BottomLeftRadius="12dp"
+            app:ll_BottomRightRadius="12dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开启定位权限"
+                android:textColor="@color/_222222"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:text="便于我们根据您的具体位置提供精准天气和短时降雨预报"
+                    android:textColor="#A0A0A0"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:id="@+id/tv_Agree"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="20dp"
+                android:text="开启定位"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:bgColor="#379BFF"
+                app:radius="6dp" />
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:text="放弃服务"
+                android:textColor="#CCCCCC"
+                android:textSize="14dp" />
+
+        </com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout>
+    </LinearLayout>
+</FrameLayout>

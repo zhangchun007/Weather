@@ -1,0 +1,3158 @@
+{
+  "v": "5.6.5",
+  "fr": 30,
+  "ip": 0,
+  "op": 75,
+  "w": 810,
+  "h": 810,
+  "nm": "冰雹 晚上",
+  "ddd": 0,
+  "assets": [],
+  "layers": [
+    {
+      "ddd": 0,
+      "ind": 1,
+      "ty": 4,
+      "nm": "1",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 60,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 70,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 75,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11,
+          "x": "var $bm_rt;\nvar elastic, gravity, bounceMax, on_off, n, n, t, v, vl, vu, vu, tCur, segDur, tNext, numberOfBounces, delta, inOutExp;\ntry {\n    elastic = $bm_div(effect('\\u4e0d\\u900f\\u660e\\u5ea6 - Stretch')('ADBE Slider Control-0001'), 100);\n    gravity = $bm_mul(effect('\\u4e0d\\u900f\\u660e\\u5ea6 - Gravity')('ADBE Slider Control-0001'), 100);\n    bounceMax = effect('\\u4e0d\\u900f\\u660e\\u5ea6 - Max Jumps')('ADBE Slider Control-0001');\n    on_off = effect('\\u4e0d\\u900f\\u660e\\u5ea6 - Jump In/Out')('ADBE Checkbox Control-0001');\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n > 0) {\n        t = $bm_sub(time, key(n).time);\n        v = $bm_mul($bm_neg(velocityAtTime($bm_sub(key(n).time, 0.001))), elastic);\n        vl = length(v);\n        if ($bm_isInstanceOfArray(value)) {\n            vu = vl > 0 ? normalize(v) : [\n                0,\n                0,\n                0\n            ];\n        } else {\n            vu = v < 0 ? -1 : 1;\n        }\n        tCur = 0;\n        segDur = $bm_div($bm_mul(2, vl), gravity);\n        tNext = segDur;\n        numberOfBounces = 1;\n        while (tNext < t && numberOfBounces <= bounceMax) {\n            vl *= elastic;\n            segDur *= elastic;\n            tCur = tNext;\n            tNext = $bm_sum(tNext, segDur);\n            numberOfBounces++;\n        }\n        if (numberOfBounces <= bounceMax) {\n            delta = $bm_sub(t, tCur);\n            $bm_rt = inOutExp = $bm_mul($bm_mul(vu, delta), $bm_sub(vl, $bm_div($bm_mul(gravity, delta), 2)));\n            if (on_off == 1) {\n                $bm_rt = value = $bm_sub(value, inOutExp);\n            } else {\n                $bm_rt = value = $bm_sum(value, inOutExp);\n            }\n        } else {\n            $bm_rt = value = value;\n        }\n    } else {\n        $bm_rt = value = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10,
+          "x": "var $bm_rt;\nvar elastic, gravity, bounceMax, on_off, n, n, t, v, vl, vu, vu, tCur, segDur, tNext, numberOfBounces, delta, inOutExp;\ntry {\n    elastic = $bm_div(effect('\\u65cb\\u8f6c - Stretch')('ADBE Slider Control-0001'), 100);\n    gravity = $bm_mul(effect('\\u65cb\\u8f6c - Gravity')('ADBE Slider Control-0001'), 100);\n    bounceMax = effect('\\u65cb\\u8f6c - Max Jumps')('ADBE Slider Control-0001');\n    on_off = effect('\\u65cb\\u8f6c - Jump In/Out')('ADBE Checkbox Control-0001');\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n > 0) {\n        t = $bm_sub(time, key(n).time);\n        v = $bm_mul($bm_neg(velocityAtTime($bm_sub(key(n).time, 0.001))), elastic);\n        vl = length(v);\n        if ($bm_isInstanceOfArray(value)) {\n            vu = vl > 0 ? normalize(v) : [\n                0,\n                0,\n                0\n            ];\n        } else {\n            vu = v < 0 ? -1 : 1;\n        }\n        tCur = 0;\n        segDur = $bm_div($bm_mul(2, vl), gravity);\n        tNext = segDur;\n        numberOfBounces = 1;\n        while (tNext < t && numberOfBounces <= bounceMax) {\n            vl *= elastic;\n            segDur *= elastic;\n            tCur = tNext;\n            tNext = $bm_sum(tNext, segDur);\n            numberOfBounces++;\n        }\n        if (numberOfBounces <= bounceMax) {\n            delta = $bm_sub(t, tCur);\n            $bm_rt = inOutExp = $bm_mul($bm_mul(vu, delta), $bm_sub(vl, $bm_div($bm_mul(gravity, delta), 2)));\n            if (on_off == 1) {\n                $bm_rt = value = $bm_sub(value, inOutExp);\n            } else {\n                $bm_rt = value = $bm_sum(value, inOutExp);\n            }\n        } else {\n            $bm_rt = value = value;\n        }\n    } else {\n        $bm_rt = value = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 0,
+              "s": [
+                567,
+                659,
+                0
+              ],
+              "to": [
+                0,
+                11.785,
+                0
+              ],
+              "ti": [
+                0,
+                -26.43,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 12.5,
+              "s": [
+                567,
+                758,
+                0
+              ],
+              "to": [
+                0,
+                10.948,
+                0
+              ],
+              "ti": [
+                0,
+                3.333,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 25,
+              "s": [
+                567,
+                718,
+                0
+              ],
+              "to": [
+                0,
+                -3.333,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 35,
+              "s": [
+                567,
+                758,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 42.5,
+              "s": [
+                567,
+                738,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 47.5,
+              "s": [
+                567,
+                758,
+                0
+              ]
+            }
+          ],
+          "ix": 2
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            0,
+            0,
+            0
+          ],
+          "ix": 1
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "x": "var $bm_rt;\nvar elastic, gravity, bounceMax, on_off, n, n, t, v, vl, vu, vu, tCur, segDur, tNext, numberOfBounces, delta, inOutExp;\ntry {\n    elastic = $bm_div(effect('\\u7f29\\u653e - Stretch')('ADBE Slider Control-0001'), 100);\n    gravity = $bm_mul(effect('\\u7f29\\u653e - Gravity')('ADBE Slider Control-0001'), 100);\n    bounceMax = effect('\\u7f29\\u653e - Max Jumps')('ADBE Slider Control-0001');\n    on_off = effect('\\u7f29\\u653e - Jump In/Out')('ADBE Checkbox Control-0001');\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n > 0) {\n        t = $bm_sub(time, key(n).time);\n        v = $bm_mul($bm_neg(velocityAtTime($bm_sub(key(n).time, 0.001))), elastic);\n        vl = length(v);\n        if ($bm_isInstanceOfArray(value)) {\n            vu = vl > 0 ? normalize(v) : [\n                0,\n                0,\n                0\n            ];\n        } else {\n            vu = v < 0 ? -1 : 1;\n        }\n        tCur = 0;\n        segDur = $bm_div($bm_mul(2, vl), gravity);\n        tNext = segDur;\n        numberOfBounces = 1;\n        while (tNext < t && numberOfBounces <= bounceMax) {\n            vl *= elastic;\n            segDur *= elastic;\n            tCur = tNext;\n            tNext = $bm_sum(tNext, segDur);\n            numberOfBounces++;\n        }\n        if (numberOfBounces <= bounceMax) {\n            delta = $bm_sub(t, tCur);\n            $bm_rt = inOutExp = $bm_mul($bm_mul(vu, delta), $bm_sub(vl, $bm_div($bm_mul(gravity, delta), 2)));\n            if (on_off == 1) {\n                $bm_rt = value = $bm_sub(value, inOutExp);\n            } else {\n                $bm_rt = value = $bm_sum(value, inOutExp);\n            }\n        } else {\n            $bm_rt = value = value;\n        }\n    } else {\n        $bm_rt = value = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        }
+      },
+      "ao": 0,
+      "ef": [
+        {
+          "ty": 5,
+          "nm": "缩放 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 1,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 2,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 3,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 4,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 5,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 6,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 7,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 8,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 9,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 10,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 11,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 12,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        }
+      ],
+      "shapes": [
+        {
+          "ty": "gr",
+          "it": [
+            {
+              "ty": "rc",
+              "d": 1,
+              "s": {
+                "a": 0,
+                "k": [
+                  30,
+                  30
+                ],
+                "ix": 2
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 3
+              },
+              "r": {
+                "a": 0,
+                "k": 12,
+                "ix": 4
+              },
+              "nm": "1-1-1",
+              "mn": "ADBE Vector Shape - Rect",
+              "hd": false
+            },
+            {
+              "ty": "gf",
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 10
+              },
+              "r": 1,
+              "bm": 0,
+              "g": {
+                "p": 3,
+                "k": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0.722,
+                    0.694,
+                    1,
+                    0.5,
+                    0.861,
+                    0.847,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ix": 9
+                }
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  -11.358,
+                  -10.687
+                ],
+                "ix": 5
+              },
+              "e": {
+                "a": 0,
+                "k": [
+                  11.832,
+                  10.297
+                ],
+                "ix": 6
+              },
+              "t": 1,
+              "nm": "Gradient02",
+              "mn": "ADBE Vector Graphic - G-Fill",
+              "hd": false
+            },
+            {
+              "ty": "tr",
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 1
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  300,
+                  300
+                ],
+                "ix": 3
+              },
+              "r": {
+                "a": 0,
+                "k": -315,
+                "ix": 6
+              },
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 7
+              },
+              "sk": {
+                "a": 0,
+                "k": 0,
+                "ix": 4
+              },
+              "sa": {
+                "a": 0,
+                "k": 0,
+                "ix": 5
+              },
+              "nm": "变换"
+            }
+          ],
+          "nm": "1-1",
+          "np": 2,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "mn": "ADBE Vector Group",
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 150,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 2,
+      "ty": 4,
+      "nm": "2",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 60,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 70,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 75,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, t, v;\ntry {\n    amp = $bm_div(effect('\\u4e0d\\u900f\\u660e\\u5ea6 - Overshoot')('ADBE Slider Control-0001'), 2.5), freq = $bm_div(effect('\\u4e0d\\u900f\\u660e\\u5ea6 - Bounce')('ADBE Slider Control-0001'), 20), decay = $bm_div(effect('\\u4e0d\\u900f\\u660e\\u5ea6 - Friction')('ADBE Slider Control-0001'), 20), n = 0, 0 < numKeys && (n = nearestKey(time).index, key(n).time > time && n--), t = 0 === n ? 0 : $bm_sub(time, key(n).time), $bm_rt = 0 < n ? (v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10))), $bm_sum(value, $bm_div($bm_mul($bm_mul($bm_div(v, 100), amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))))) : value;\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, t, v;\ntry {\n    amp = $bm_div(effect('\\u65cb\\u8f6c - Overshoot')('ADBE Slider Control-0001'), 2.5), freq = $bm_div(effect('\\u65cb\\u8f6c - Bounce')('ADBE Slider Control-0001'), 20), decay = $bm_div(effect('\\u65cb\\u8f6c - Friction')('ADBE Slider Control-0001'), 20), n = 0, 0 < numKeys && (n = nearestKey(time).index, key(n).time > time && n--), t = 0 === n ? 0 : $bm_sub(time, key(n).time), $bm_rt = 0 < n ? (v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10))), $bm_sum(value, $bm_div($bm_mul($bm_mul($bm_div(v, 100), amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))))) : value;\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 0,
+              "s": [
+                405,
+                569,
+                0
+              ],
+              "to": [
+                0,
+                11.785,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 25,
+              "s": [
+                405,
+                758,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 37.5,
+              "s": [
+                405,
+                718,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 47.5,
+              "s": [
+                405,
+                758,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 55,
+              "s": [
+                405,
+                738,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 60,
+              "s": [
+                405,
+                758,
+                0
+              ]
+            }
+          ],
+          "ix": 2
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            0,
+            0,
+            0
+          ],
+          "ix": 1,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, t, v;\ntry {\n    amp = $bm_div(effect('\\u951a\\u70b9 - Overshoot')('ADBE Slider Control-0001'), 2.5), freq = $bm_div(effect('\\u951a\\u70b9 - Bounce')('ADBE Slider Control-0001'), 20), decay = $bm_div(effect('\\u951a\\u70b9 - Friction')('ADBE Slider Control-0001'), 20), n = 0, 0 < numKeys && (n = nearestKey(time).index, key(n).time > time && n--), t = 0 === n ? 0 : $bm_sub(time, key(n).time), $bm_rt = 0 < n ? (v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10))), $bm_sum(value, $bm_div($bm_mul($bm_mul($bm_div(v, 100), amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))))) : value;\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "x": "var $bm_rt;\nvar amp, freq, decay, n, t, v;\ntry {\n    amp = $bm_div(effect('\\u7f29\\u653e - Overshoot')('ADBE Slider Control-0001'), 2.5), freq = $bm_div(effect('\\u7f29\\u653e - Bounce')('ADBE Slider Control-0001'), 20), decay = $bm_div(effect('\\u7f29\\u653e - Friction')('ADBE Slider Control-0001'), 20), n = 0, 0 < numKeys && (n = nearestKey(time).index, key(n).time > time && n--), t = 0 === n ? 0 : $bm_sub(time, key(n).time), $bm_rt = 0 < n ? (v = velocityAtTime($bm_sub(key(n).time, $bm_div(thisComp.frameDuration, 10))), $bm_sum(value, $bm_div($bm_mul($bm_mul($bm_div(v, 100), amp), Math.sin($bm_mul($bm_mul($bm_mul(freq, t), 2), Math.PI))), Math.exp($bm_mul(decay, t))))) : value;\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        }
+      },
+      "ao": 0,
+      "ef": [
+        {
+          "ty": 5,
+          "nm": "缩放 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 1,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 2,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 3,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 4,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 5,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 6,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 7,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 8,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 9,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 10,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 11,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 12,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 13,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 14,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 15,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 16,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Overshoot",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 17,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Bounce",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 18,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Friction",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 19,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Overshoot",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 20,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Bounce",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 21,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Friction",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 22,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Overshoot",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 23,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Bounce",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 24,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Friction",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 25,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Overshoot",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 26,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Bounce",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 27,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Friction",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 28,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Overshoot",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 29,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Bounce",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 30,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Friction",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 31,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Overshoot",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 32,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Bounce",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 33,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "不透明度 - Friction",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 34,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Overshoot",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 35,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Bounce",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 36,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Friction",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 37,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Overshoot",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 38,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 20,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Bounce",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 39,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "旋转 - Friction",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 40,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 40,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        }
+      ],
+      "shapes": [
+        {
+          "ty": "gr",
+          "it": [
+            {
+              "ty": "rc",
+              "d": 1,
+              "s": {
+                "a": 0,
+                "k": [
+                  30,
+                  30
+                ],
+                "ix": 2
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 3
+              },
+              "r": {
+                "a": 0,
+                "k": 12,
+                "ix": 4
+              },
+              "nm": "2-2-2",
+              "mn": "ADBE Vector Shape - Rect",
+              "hd": false
+            },
+            {
+              "ty": "gf",
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 10
+              },
+              "r": 1,
+              "bm": 0,
+              "g": {
+                "p": 3,
+                "k": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0.722,
+                    0.694,
+                    1,
+                    0.5,
+                    0.861,
+                    0.847,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ix": 9
+                }
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  -11.358,
+                  -10.687
+                ],
+                "ix": 5
+              },
+              "e": {
+                "a": 0,
+                "k": [
+                  11.832,
+                  10.297
+                ],
+                "ix": 6
+              },
+              "t": 1,
+              "nm": "Gradient-03",
+              "mn": "ADBE Vector Graphic - G-Fill",
+              "hd": false
+            },
+            {
+              "ty": "tr",
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 1
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  300,
+                  300
+                ],
+                "ix": 3
+              },
+              "r": {
+                "a": 0,
+                "k": -315,
+                "ix": 6
+              },
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 7
+              },
+              "sk": {
+                "a": 0,
+                "k": 0,
+                "ix": 4
+              },
+              "sa": {
+                "a": 0,
+                "k": 0,
+                "ix": 5
+              },
+              "nm": "变换"
+            }
+          ],
+          "nm": "2-2",
+          "np": 2,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "mn": "ADBE Vector Group",
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 150,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 3,
+      "ty": 4,
+      "nm": "3",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 60,
+              "s": [
+                100
+              ]
+            },
+            {
+              "i": {
+                "x": [
+                  0.833
+                ],
+                "y": [
+                  0.833
+                ]
+              },
+              "o": {
+                "x": [
+                  0.167
+                ],
+                "y": [
+                  0.167
+                ]
+              },
+              "t": 70,
+              "s": [
+                100
+              ]
+            },
+            {
+              "t": 75,
+              "s": [
+                0
+              ]
+            }
+          ],
+          "ix": 11
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 0,
+              "s": [
+                243,
+                659,
+                0
+              ],
+              "to": [
+                0,
+                11.785,
+                0
+              ],
+              "ti": [
+                0,
+                -26.43,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 12.5,
+              "s": [
+                243,
+                758,
+                0
+              ],
+              "to": [
+                0,
+                10.948,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 25,
+              "s": [
+                243,
+                718,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 35,
+              "s": [
+                243,
+                758,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 42.5,
+              "s": [
+                243,
+                738,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 47.5,
+              "s": [
+                243,
+                758,
+                0
+              ]
+            }
+          ],
+          "ix": 2,
+          "x": "var $bm_rt;\nvar elastic, gravity, bounceMax, on_off, n, n, t, v, vl, vu, vu, tCur, segDur, tNext, numberOfBounces, delta, inOutExp;\ntry {\n    elastic = $bm_div(effect('\\u4f4d\\u7f6e - Stretch')('ADBE Slider Control-0001'), 100);\n    gravity = $bm_mul(effect('\\u4f4d\\u7f6e - Gravity')('ADBE Slider Control-0001'), 100);\n    bounceMax = effect('\\u4f4d\\u7f6e - Max Jumps')('ADBE Slider Control-0001');\n    on_off = effect('\\u4f4d\\u7f6e - Jump In/Out')('ADBE Checkbox Control-0001');\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n > 0) {\n        t = $bm_sub(time, key(n).time);\n        v = $bm_mul($bm_neg(velocityAtTime($bm_sub(key(n).time, 0.001))), elastic);\n        vl = length(v);\n        if ($bm_isInstanceOfArray(value)) {\n            vu = vl > 0 ? normalize(v) : [\n                0,\n                0,\n                0\n            ];\n        } else {\n            vu = v < 0 ? -1 : 1;\n        }\n        tCur = 0;\n        segDur = $bm_div($bm_mul(2, vl), gravity);\n        tNext = segDur;\n        numberOfBounces = 1;\n        while (tNext < t && numberOfBounces <= bounceMax) {\n            vl *= elastic;\n            segDur *= elastic;\n            tCur = tNext;\n            tNext = $bm_sum(tNext, segDur);\n            numberOfBounces++;\n        }\n        if (numberOfBounces <= bounceMax) {\n            delta = $bm_sub(t, tCur);\n            $bm_rt = inOutExp = $bm_mul($bm_mul(vu, delta), $bm_sub(vl, $bm_div($bm_mul(gravity, delta), 2)));\n            if (on_off == 1) {\n                $bm_rt = value = $bm_sub(value, inOutExp);\n            } else {\n                $bm_rt = value = $bm_sum(value, inOutExp);\n            }\n        } else {\n            $bm_rt = value = value;\n        }\n    } else {\n        $bm_rt = value = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            0,
+            0,
+            0
+          ],
+          "ix": 1,
+          "x": "var $bm_rt;\nvar elastic, gravity, bounceMax, on_off, n, n, t, v, vl, vu, vu, tCur, segDur, tNext, numberOfBounces, delta, inOutExp;\ntry {\n    elastic = $bm_div(effect('\\u951a\\u70b9 - Stretch')('ADBE Slider Control-0001'), 100);\n    gravity = $bm_mul(effect('\\u951a\\u70b9 - Gravity')('ADBE Slider Control-0001'), 100);\n    bounceMax = effect('\\u951a\\u70b9 - Max Jumps')('ADBE Slider Control-0001');\n    on_off = effect('\\u951a\\u70b9 - Jump In/Out')('ADBE Checkbox Control-0001');\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n > 0) {\n        t = $bm_sub(time, key(n).time);\n        v = $bm_mul($bm_neg(velocityAtTime($bm_sub(key(n).time, 0.001))), elastic);\n        vl = length(v);\n        if ($bm_isInstanceOfArray(value)) {\n            vu = vl > 0 ? normalize(v) : [\n                0,\n                0,\n                0\n            ];\n        } else {\n            vu = v < 0 ? -1 : 1;\n        }\n        tCur = 0;\n        segDur = $bm_div($bm_mul(2, vl), gravity);\n        tNext = segDur;\n        numberOfBounces = 1;\n        while (tNext < t && numberOfBounces <= bounceMax) {\n            vl *= elastic;\n            segDur *= elastic;\n            tCur = tNext;\n            tNext = $bm_sum(tNext, segDur);\n            numberOfBounces++;\n        }\n        if (numberOfBounces <= bounceMax) {\n            delta = $bm_sub(t, tCur);\n            $bm_rt = inOutExp = $bm_mul($bm_mul(vu, delta), $bm_sub(vl, $bm_div($bm_mul(gravity, delta), 2)));\n            if (on_off == 1) {\n                $bm_rt = value = $bm_sub(value, inOutExp);\n            } else {\n                $bm_rt = value = $bm_sum(value, inOutExp);\n            }\n        } else {\n            $bm_rt = value = value;\n        }\n    } else {\n        $bm_rt = value = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6,
+          "x": "var $bm_rt;\nvar elastic, gravity, bounceMax, on_off, n, n, t, v, vl, vu, vu, tCur, segDur, tNext, numberOfBounces, delta, inOutExp;\ntry {\n    elastic = $bm_div(effect('\\u7f29\\u653e - Stretch')('ADBE Slider Control-0001'), 100);\n    gravity = $bm_mul(effect('\\u7f29\\u653e - Gravity')('ADBE Slider Control-0001'), 100);\n    bounceMax = effect('\\u7f29\\u653e - Max Jumps')('ADBE Slider Control-0001');\n    on_off = effect('\\u7f29\\u653e - Jump In/Out')('ADBE Checkbox Control-0001');\n    $bm_rt = n = 0;\n    if (numKeys > 0) {\n        $bm_rt = n = nearestKey(time).index;\n        if (key(n).time > time) {\n            n--;\n        }\n    }\n    if (n > 0) {\n        t = $bm_sub(time, key(n).time);\n        v = $bm_mul($bm_neg(velocityAtTime($bm_sub(key(n).time, 0.001))), elastic);\n        vl = length(v);\n        if ($bm_isInstanceOfArray(value)) {\n            vu = vl > 0 ? normalize(v) : [\n                0,\n                0,\n                0\n            ];\n        } else {\n            vu = v < 0 ? -1 : 1;\n        }\n        tCur = 0;\n        segDur = $bm_div($bm_mul(2, vl), gravity);\n        tNext = segDur;\n        numberOfBounces = 1;\n        while (tNext < t && numberOfBounces <= bounceMax) {\n            vl *= elastic;\n            segDur *= elastic;\n            tCur = tNext;\n            tNext = $bm_sum(tNext, segDur);\n            numberOfBounces++;\n        }\n        if (numberOfBounces <= bounceMax) {\n            delta = $bm_sub(t, tCur);\n            $bm_rt = inOutExp = $bm_mul($bm_mul(vu, delta), $bm_sub(vl, $bm_div($bm_mul(gravity, delta), 2)));\n            if (on_off == 1) {\n                $bm_rt = value = $bm_sub(value, inOutExp);\n            } else {\n                $bm_rt = value = $bm_sum(value, inOutExp);\n            }\n        } else {\n            $bm_rt = value = value;\n        }\n    } else {\n        $bm_rt = value = value;\n    }\n} catch (e$$4) {\n    $bm_rt = value = value;\n}"
+        }
+      },
+      "ao": 0,
+      "ef": [
+        {
+          "ty": 5,
+          "nm": "缩放 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 1,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 2,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 3,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "缩放 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 4,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "位置 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 5,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "位置 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 6,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "位置 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 7,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "位置 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 8,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Stretch",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 9,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 60,
+                "ix": 1
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Gravity",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 10,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 100);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Max Jumps",
+          "np": 3,
+          "mn": "ADBE Slider Control",
+          "ix": 11,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 0,
+              "nm": "滑块",
+              "mn": "ADBE Slider Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 8,
+                "ix": 1,
+                "x": "var $bm_rt;\n$bm_rt = clamp(value, 0, 10);"
+              }
+            }
+          ]
+        },
+        {
+          "ty": 5,
+          "nm": "锚点 - Jump In/Out",
+          "np": 3,
+          "mn": "ADBE Checkbox Control",
+          "ix": 12,
+          "en": 1,
+          "ef": [
+            {
+              "ty": 7,
+              "nm": "复选框",
+              "mn": "ADBE Checkbox Control-0001",
+              "ix": 1,
+              "v": {
+                "a": 0,
+                "k": 0,
+                "ix": 1
+              }
+            }
+          ]
+        }
+      ],
+      "shapes": [
+        {
+          "ty": "gr",
+          "it": [
+            {
+              "ty": "rc",
+              "d": 1,
+              "s": {
+                "a": 0,
+                "k": [
+                  30,
+                  30
+                ],
+                "ix": 2
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 3
+              },
+              "r": {
+                "a": 0,
+                "k": 12,
+                "ix": 4
+              },
+              "nm": "3-3-3",
+              "mn": "ADBE Vector Shape - Rect",
+              "hd": false
+            },
+            {
+              "ty": "gf",
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 10
+              },
+              "r": 1,
+              "bm": 0,
+              "g": {
+                "p": 3,
+                "k": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0.722,
+                    0.694,
+                    1,
+                    0.5,
+                    0.861,
+                    0.847,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "ix": 9
+                }
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  -11.358,
+                  -10.687
+                ],
+                "ix": 5
+              },
+              "e": {
+                "a": 0,
+                "k": [
+                  11.832,
+                  10.297
+                ],
+                "ix": 6
+              },
+              "t": 1,
+              "nm": "Gradient-04",
+              "mn": "ADBE Vector Graphic - G-Fill",
+              "hd": false
+            },
+            {
+              "ty": "tr",
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 1
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  300,
+                  300
+                ],
+                "ix": 3
+              },
+              "r": {
+                "a": 0,
+                "k": -315,
+                "ix": 6
+              },
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 7
+              },
+              "sk": {
+                "a": 0,
+                "k": 0,
+                "ix": 4
+              },
+              "sa": {
+                "a": 0,
+                "k": 0,
+                "ix": 5
+              },
+              "nm": "变换"
+            }
+          ],
+          "nm": "3-3",
+          "np": 2,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "mn": "ADBE Vector Group",
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 150,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 4,
+      "ty": 4,
+      "nm": "4",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 0,
+              "s": [
+                509.737,
+                354.263,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 37.5,
+              "s": [
+                489.737,
+                354.263,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 75,
+              "s": [
+                509.737,
+                354.263,
+                0
+              ]
+            }
+          ],
+          "ix": 2
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            0,
+            0,
+            0
+          ],
+          "ix": 1
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "shapes": [
+        {
+          "ty": "gr",
+          "it": [
+            {
+              "d": 1,
+              "ty": "el",
+              "s": {
+                "a": 0,
+                "k": [
+                  196.175,
+                  196.175
+                ],
+                "ix": 2
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 3
+              },
+              "nm": "1-1-1",
+              "mn": "ADBE Vector Shape - Ellipse",
+              "hd": false
+            },
+            {
+              "ty": "gf",
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 10
+              },
+              "r": 1,
+              "bm": 0,
+              "g": {
+                "p": 3,
+                "k": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0.51,
+                    0.451,
+                    0.733,
+                    0.5,
+                    0.72,
+                    0.676,
+                    0.859,
+                    1,
+                    0.929,
+                    0.902,
+                    0.984
+                  ],
+                  "ix": 9
+                }
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  0,
+                  -98.088
+                ],
+                "ix": 5
+              },
+              "e": {
+                "a": 0,
+                "k": [
+                  0,
+                  69.432
+                ],
+                "ix": 6
+              },
+              "t": 1,
+              "nm": "Gradient16",
+              "mn": "ADBE Vector Graphic - G-Fill",
+              "hd": false
+            },
+            {
+              "ty": "tr",
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 1
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  300,
+                  300
+                ],
+                "ix": 3
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 6
+              },
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 7
+              },
+              "sk": {
+                "a": 0,
+                "k": 0,
+                "ix": 4
+              },
+              "sa": {
+                "a": 0,
+                "k": 0,
+                "ix": 5
+              },
+              "nm": "变换"
+            }
+          ],
+          "nm": "1-1",
+          "np": 2,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "mn": "ADBE Vector Group",
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 150,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 5,
+      "ty": 4,
+      "nm": "5",
+      "sr": 1,
+      "ks": {
+        "o": {
+          "a": 0,
+          "k": 100,
+          "ix": 11
+        },
+        "r": {
+          "a": 0,
+          "k": 0,
+          "ix": 10
+        },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 0,
+              "s": [
+                258.7,
+                459,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "i": {
+                "x": 0.833,
+                "y": 0.833
+              },
+              "o": {
+                "x": 0.167,
+                "y": 0.167
+              },
+              "t": 37.5,
+              "s": [
+                278.7,
+                459,
+                0
+              ],
+              "to": [
+                0,
+                0,
+                0
+              ],
+              "ti": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "t": 75,
+              "s": [
+                258.7,
+                459,
+                0
+              ]
+            }
+          ],
+          "ix": 2
+        },
+        "a": {
+          "a": 0,
+          "k": [
+            0,
+            0,
+            0
+          ],
+          "ix": 1
+        },
+        "s": {
+          "a": 0,
+          "k": [
+            100,
+            100,
+            100
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "shapes": [
+        {
+          "ty": "gr",
+          "it": [
+            {
+              "ind": 0,
+              "ty": "sh",
+              "ix": 1,
+              "ks": {
+                "a": 0,
+                "k": {
+                  "i": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      34.54
+                    ],
+                    [
+                      -34.41,
+                      0.56
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      -58.15
+                    ],
+                    [
+                      0,
+                      0
+                    ]
+                  ],
+                  "o": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      -34.41,
+                      -0.56
+                    ],
+                    [
+                      0,
+                      -34.55
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      58.16,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      0
+                    ]
+                  ],
+                  "v": [
+                    [
+                      -21.063,
+                      63.175
+                    ],
+                    [
+                      -22.103,
+                      63.165
+                    ],
+                    [
+                      -84.233,
+                      0.005
+                    ],
+                    [
+                      -22.103,
+                      -63.165
+                    ],
+                    [
+                      -21.063,
+                      -63.175
+                    ],
+                    [
+                      -20.523,
+                      -63.175
+                    ],
+                    [
+                      -20.523,
+                      -63.175
+                    ],
+                    [
+                      -21.063,
+                      -63.175
+                    ],
+                    [
+                      84.237,
+                      42.115
+                    ],
+                    [
+                      76.153,
+                      63.117
+                    ]
+                  ],
+                  "c": true
+                },
+                "ix": 2
+              },
+              "nm": "路径 1",
+              "mn": "ADBE Vector Shape - Group",
+              "hd": false
+            },
+            {
+              "ty": "gf",
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 10
+              },
+              "r": 1,
+              "bm": 0,
+              "g": {
+                "p": 3,
+                "k": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0.51,
+                    0.451,
+                    0.733,
+                    0.5,
+                    0.72,
+                    0.676,
+                    0.859,
+                    1,
+                    0.929,
+                    0.902,
+                    0.984
+                  ],
+                  "ix": 9
+                }
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  0,
+                  -63.175
+                ],
+                "ix": 5
+              },
+              "e": {
+                "a": 0,
+                "k": [
+                  0,
+                  44.719
+                ],
+                "ix": 6
+              },
+              "t": 1,
+              "nm": "Gradient12",
+              "mn": "ADBE Vector Graphic - G-Fill",
+              "hd": false
+            },
+            {
+              "ty": "tr",
+              "p": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0
+                ],
+                "ix": 1
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  300,
+                  300
+                ],
+                "ix": 3
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 6
+              },
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 7
+              },
+              "sk": {
+                "a": 0,
+                "k": 0,
+                "ix": 4
+              },
+              "sa": {
+                "a": 0,
+                "k": 0,
+                "ix": 5
+              },
+              "nm": "变换"
+            }
+          ],
+          "nm": "小",
+          "np": 2,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "mn": "ADBE Vector Group",
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 150,
+      "st": 0,
+      "bm": 0
+    }
+  ],
+  "markers": []
+}

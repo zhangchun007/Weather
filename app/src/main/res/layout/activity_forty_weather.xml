@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="#F4F5F9">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_forty_weather"></ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.maiya.thirdlibrary.widget.TitleBar
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.zhangsheng.shunxin.weather.widget.TemperatureTrendView
+                    android:id="@+id/temperatureTrendView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginEnd="@dimen/dp_12" />
+
+                <com.zhangsheng.shunxin.weather.widget.RainfallTrendView
+                    android:id="@+id/rainfallTrendView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginEnd="@dimen/dp_12" />
+
+                <include
+                    android:id="@+id/forty_calendar"
+                    layout="@layout/forty_days_calendar" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/forty_calendar_widget_bg">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_date"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:background="@mipmap/bg_calendar_data">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/tv_dates"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/white"
+                                android:textSize="12dp"
+                                tools:text="4月12日" />
+
+                            <TextView
+                                android:id="@+id/tv_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/white"
+                                android:textSize="12dp"
+                                tools:text="4月12日" />
+
+                            <TextView
+                                android:id="@+id/tv_week"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_dates"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/white"
+                                android:textSize="11dp"
+                                tools:text="星期一" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:id="@+id/img_weather"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_24"
+                        android:layout_toRightOf="@+id/rl_date"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_weather_baoxue" />
+
+                    <TextView
+                        android:id="@+id/tv_weather_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:layout_toRightOf="@+id/img_weather"
+                        android:textColor="#222222"
+                        android:textSize="20dp"
+                        tools:text="18°/12°" />
+
+                    <TextView
+                        android:id="@+id/tv_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_weather_num"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_toRightOf="@+id/img_weather"
+                        android:textColor="#7A7B7F"
+                        android:textSize="13dp"
+                        tools:text="多云转晴" />
+
+                    <TextView
+                        android:id="@+id/tv_woond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_weather_num"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_toRightOf="@+id/tv_weather"
+                        android:drawableRight="@mipmap/img_divider_line"
+                        android:drawablePadding="2dp"
+                        android:textColor="#7A7B7F"
+                        android:textSize="13dp"
+                        tools:text="南风" />
+
+                    <TextView
+                        android:id="@+id/tv_woond_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_weather_num"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_toRightOf="@+id/tv_woond"
+                        android:textColor="#7A7B7F"
+                        android:textSize="13dp"
+                        tools:text="4级" />
+
+                </RelativeLayout>
+
+                <com.zhangsheng.shunxin.weather.widget.RoundAngleFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_12"
+                    app:radius="@dimen/dp_10">
+
+                    <com.zhangsheng.shunxin.ad.widget.B2PictureAdMaterialView
+                        android:id="@+id/adv_material_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                </com.zhangsheng.shunxin.weather.widget.RoundAngleFrameLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

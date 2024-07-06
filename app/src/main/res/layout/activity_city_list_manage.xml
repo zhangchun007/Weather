@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <com.maiya.thirdlibrary.widget.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/add_city_shap_white"
+        android:drawableLeft="@mipmap/icon_search"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:hint="搜索添加城市"
+        android:paddingLeft="8dp"
+        android:textColor="@color/color_222"
+        android:textColorHint="@color/tv_gray_light"
+        android:textSize="14dp"
+        android:transitionName="et" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F2F2F2" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/et"
+        android:drawableLeft="@mipmap/icon_location_blue"
+        android:drawablePadding="2dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="添加当前定位城市"
+        android:textColor="#3797FF"
+        android:textSize="@dimen/dp_16" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/bg_color" />
+
+    <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_above="@id/add_city"
+        android:background="#F2F2F2"
+        android:layout_below="@+id/location"
+      />
+
+    <com.zhangsheng.shunxin.ad.widget.M2PictureAdStyle
+        android:id="@+id/adv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeView
+        android:id="@+id/add_city"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@mipmap/icon_local_add"
+        android:drawablePadding="@dimen/dp_5"
+        android:gravity="center"
+        android:text="添加城市"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:bgColor="@color/color_379bff" />
+
+
+</LinearLayout>

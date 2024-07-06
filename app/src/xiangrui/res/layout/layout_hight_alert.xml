@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/shape8r_lr_t_black20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20">
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:id="@+id/bg_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:radius="@dimen/dp_20" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="-108dp"
+        android:background="@drawable/shape8r_lr_t_black20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20">
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:id="@+id/bg_icon_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:radius="@dimen/dp_20" />
+
+            <ImageView
+                android:id="@+id/icon_next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="14dp" />
+    </LinearLayout>
+</FrameLayout>

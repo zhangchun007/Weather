@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_notify"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/notification_shap_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/icon_weather"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:src="@mipmap/logo_round" />
+
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_toRightOf="@+id/icon_weather"
+        android:text="数据过期，点击"
+        android:textColor="#666666"
+        android:textSize="@dimen/dp_15"
+        android:visibility="gone"></TextView>
+
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_toRightOf="@+id/tv_error"
+        android:text="重新刷新"
+        android:textColor="#088EFF"
+        android:textSize="@dimen/dp_15"
+        android:visibility="gone"></TextView>
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_toRightOf="@+id/icon_weather"
+        android:text="正在读取中…"
+        android:textColor="#088EFF"
+        android:textSize="@dimen/dp_15"
+        android:visibility="gone"></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_toRightOf="@+id/icon_weather">
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#222222"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:text="24" />
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toRightOf="@+id/tv_temp"
+            android:src="@mipmap/weather_dot"></ImageView>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_temp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:layout_toRightOf="@+id/dot"
+            android:textColor="#222222"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            tools:text="上海浦东新区" />
+
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_temp"
+            android:textColor="#666666"
+            android:textSize="12dp"
+            tools:text="阴" />
+
+        <TextView
+            android:id="@+id/weather_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_temp"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/weather"
+            android:textColor="#666666"
+            android:textSize="12dp"
+            tools:text="33" />
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/dp_12">
+
+            <LinearLayout
+                android:id="@+id/ll_air"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:background="@drawable/notification_air_shap"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp">
+
+                <ImageView
+                    android:id="@+id/air_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/air_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="#333333"
+                    android:textSize="11dp"
+                    tools:text="45" />
+
+                <TextView
+                    android:id="@+id/air_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="#333333"
+                    android:textSize="11dp"
+                    tools:text="良" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/refresh_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_air"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="@dimen/dp_12"
+                android:textColor="#999999"
+                android:textSize="11dp"
+                tools:text="24小时发布" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

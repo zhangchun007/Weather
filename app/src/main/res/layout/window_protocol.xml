@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="404dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginRight="39dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:ll_BgColor="@color/white"
+        app:ll_Radius="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="温馨提示"
+            android:textColor="@color/_222222"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="left"
+                    android:lineSpacingExtra="5dp"
+                    android:text=""
+                    android:textColorHighlight="#00000000"
+                    android:textSize="16dp" />
+
+                <include layout="@layout/divider_1dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="5dp"
+                    android:text="为了给您提供精准及时的天气服务，我们将可能申请和使用如下权限："
+                    android:textColor="#A0A0A0"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="存储："
+                    android:textColor="#3C3C3C"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="· 用于读写语音播报、动态天气背景;"
+                    android:textColor="#A0A0A0"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="定位："
+                    android:textColor="#3C3C3C"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="· 用于精准获取您所在地的天气状态;"
+                    android:textColor="#A0A0A0"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="电话："
+                    android:textColor="#3C3C3C"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="· 用于语音播报时可正常接听电话。"
+                    android:textColor="#A0A0A0"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="关于个性化广告推送："
+                    android:textColor="#3C3C3C"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="· 我们的合作伙伴会通过SDK收集不能识别您个人身份的信息形成您的间接画像标签，并根据您的画像标签向您推荐符合您兴趣的广告。您可通过设置-广告设置-个性化广告推送进行关闭。"
+                    android:textColor="#A0A0A0"
+                    android:textSize="15dp" />
+
+                <include layout="@layout/divider_1dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="我们已采用业内先进的信息保护措施，并会持续优化信息保护技术和安全管理流程保护您的个人信息安全，感谢您的信任。"
+                    android:textColor="@color/tv_gray_light"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.maiya.thirdlibrary.widget.shapview.ShapeView
+            android:id="@+id/tv_Agree"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            android:text="同意并进入"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:bgColor="#379BFF"
+            app:radius="6dp" />
+
+        <TextView
+            android:id="@+id/tv_unAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="不同意"
+            android:textColor="#CCCCCC"
+            android:textSize="18dp" />
+
+    </com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#088EFF</color>
+    <color name="colorPrimaryDark">#088EFF</color>
+    <color name="colorAccent">#088EFF</color>
+
+
+    <color name="_24_lineColor">#088EFF</color>
+    <color name="color_82878b">#82878B</color>
+    <color name="color_15_hight">#fff</color>
+    <color name="color_15_weaher">#fff</color>
+    <color name="color_15_low">#fff</color>
+    <color name="color_15_333">#fff</color>
+    <color name="color_15_343434">#fff</color>
+    <color name="color_24_temp">#fff</color>
+    <color name="color_24_wind">#9BA2AA</color>
+    <color name="color_24_time">#fff</color>
+    <color name="color_24_line">#1affffff</color>
+
+    <color name="color_15_week">#fff</color>
+    <color name="color_15_date">#82878B</color>
+
+    <color name="color_15_week1">#fff</color>
+    <color name="color_15_date1">#82878B</color>
+    <color name="color_15_wind">#9BA2AA</color>
+
+    <color name="color_life_line">#00000000</color>
+    <color name="color_life_state">#fff</color>
+    <color name="color_life_name">#82878B</color>
+    <color name="color_24_now">#088EFF</color>
+
+<!--    <color name="ad_divider_bg">#00000000</color>-->
+<!--    <color name="ad_b1_title_color">#fff</color>-->
+
+</resources>

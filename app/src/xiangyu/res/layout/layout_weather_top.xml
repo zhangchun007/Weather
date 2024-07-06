@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.zhangsheng.shunxin.ad.widget.AdvBannerMaterialView
+        android:id="@+id/adv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_below="@id/adv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <com.zhangsheng.shunxin.weather.widget.HighAlertView
+                android:id="@+id/warns"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_height="wrap_content" />
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:id="@+id/typhoon"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:text="台风路径"
+                app:bgColor="#33ffffff"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:drawableLeft="@mipmap/icon_typhoon"
+                app:radius="8dp"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:orientation="horizontal"/>
+
+
+        </LinearLayout>
+
+
+        <com.maiya.thirdlibrary.widget.shapview.ShapeView
+            android:id="@+id/tv_air"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp_10"
+            android:drawableLeft="@mipmap/icon_leaf_you"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:bgColor="#33ffffff"
+            app:paddingBottom="5dp"
+            app:paddingLeft="5dp"
+            app:paddingRight="5dp"
+            app:paddingTop="5dp"
+            app:radius="8dp"
+            tools:text="30"
+            tools:textColor="@color/color_333" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_temp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/frame"
+        android:gravity="center"
+        app:layout_goneMarginTop="36dp">
+
+        <com.zhangsheng.shunxin.calendar.wegdit.LunarTextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="95dp"
+            app:fontsPath="fonts/pingfang.ttf"
+            tools:text="300"
+            tools:textColor="@color/color_333" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toRightOf="@+id/temp"
+            android:src="@mipmap/icon_temp_circle"
+            tools:tint="@color/color_333" />
+
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/temp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cloud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_temp"
+        android:layout_marginTop="21dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#B3ffffff"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/cloud_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            tools:text="1233"
+            tools:textColor="@color/color_333" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text=""
+            android:textColor="#B3ffffff"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text=""
+            android:textColor="#B3ffffff"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

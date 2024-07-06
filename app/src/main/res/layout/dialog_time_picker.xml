@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        app:BgColor="@color/white"
+        app:Radius="12dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="设置推送时间"
+            android:textColor="#222"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <com.zyyoona7.wheel.WheelView
+                android:id="@+id/picker_hour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="35dp"
+                android:layout_weight="1"
+                app:wv_autoFitTextSize="true"
+                app:wv_curved="true"
+                app:wv_curvedArcDirection="left"
+                app:wv_curvedArcDirectionFactor="2"
+                app:wv_cyclic="true"
+                app:wv_dividerOffset="5dp"
+                app:wv_lineSpacing="20dp"
+                app:wv_normalItemTextColor="#999999"
+                app:wv_selectedItemTextColor="#222222"
+                app:wv_showDivider="false"
+                app:wv_textAlign="right"
+                app:wv_textSize="18dp"
+                app:wv_visibleItems="4" />
+
+            <com.zyyoona7.wheel.WheelView
+                android:id="@+id/picker_minute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_weight="1"
+                app:wv_autoFitTextSize="true"
+                app:wv_curved="true"
+                app:wv_curvedArcDirection="right"
+                app:wv_curvedArcDirectionFactor="2"
+                app:wv_cyclic="true"
+                app:wv_dividerOffset="5dp"
+                app:wv_lineSpacing="20dp"
+                app:wv_normalItemTextColor="#999999"
+                app:wv_selectedItemTextColor="#222222"
+                app:wv_showDivider="false"
+                app:wv_textAlign="left"
+                app:wv_textSize="18dp"
+                app:wv_visibleItems="4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_picker"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="22dp"
+            android:orientation="horizontal">
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#222"
+                android:textSize="@dimen/dp_16"
+                app:bgColor="#ECEDEF"
+                app:radius="17dp" />
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:id="@+id/tv_ok"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_16"
+                android:textStyle="bold"
+                app:bgColor="#41A0F9"
+                app:radius="17dp" />
+        </LinearLayout>
+
+    </com.maiya.thirdlibrary.widget.shapview.ShapeRelativeLayout>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_24_temp">16dp</dimen>
+    <dimen name="dp_24_weather">16dp</dimen>
+    <dimen name="dp_24_wind">14dp</dimen>
+    <dimen name="dp_24_wind_level">12dp</dimen>
+    <dimen name="dp_24_weather_icon">21dp</dimen>
+
+    <dimen name="dp_15_week1">14dp</dimen>
+    <dimen name="dp_15_date1">11dp</dimen>
+    <dimen name="dp_15_weather">16dp</dimen>
+    <dimen name="dp_15_hight_low">14dp</dimen>
+    '<dimen name="dp_15_weather_icon">21dp</dimen>
+    <dimen name="dp_15_wind">14dp</dimen>
+    <dimen name="dp_15_wind_level">12dp</dimen>
+
+    <dimen name="dp_15_date_list">11dp</dimen>
+    <dimen name="dp_15_weather_icon_dis">35dp</dimen>
+    <dimen name="dp_15_list_tv_weather">16dp</dimen>
+    <dimen name="dp_15_list_tv_weather_num">16dp</dimen>
+
+    <dimen name="dp_life_icon">30dp</dimen>
+    <dimen name="tab_item_width">7dp</dimen>
+    <dimen name="tab_item_icon">3dp</dimen>
+    <dimen name="life_item_divider_margin">0dp</dimen>
+    <dimen name="info_top_bar_height">44dp</dimen>
+
+    <dimen name="refresh_text_size">10dp</dimen>
+    <dimen name="refresh_icon_size">11dp</dimen>
+    <dimen name="refresh_margin_parent_left">28dp</dimen>
+    <dimen name="refresh_icon_margin_left">2dp</dimen>
+
+    <dimen name="weather_dashGap_width">2dp</dimen>
+    <dimen name="weather_dashWidth">4dp</dimen>
+    <dimen name="weather_line_Width">0.5dp</dimen>
+    <dimen name="ad_divider">7dp</dimen>
+</resources>

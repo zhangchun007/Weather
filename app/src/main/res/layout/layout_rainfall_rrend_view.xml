@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/forty_calendar_widget_bg"
+    android:paddingBottom="@dimen/dp_20">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_12"
+        android:gravity="center"
+        android:text="降水趋势"
+        android:textColor="@color/color_222"
+        android:textSize="@dimen/dp_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tain_more"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:drawableEnd="@mipmap/icon_next_ccc"
+        android:drawablePadding="@dimen/dp_5"
+        android:gravity="center"
+        android:text="降水日期"
+        android:textColor="@color/color_AAAAAA"
+        android:textSize="@dimen/dp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/im_line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_48"
+        android:background="#F4F5F9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        tools:text="16"
+        android:textColor="@color/color_222"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_line" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="天降水"
+        android:textColor="@color/color_222"
+        android:textSize="@dimen/dp_20"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_day" />
+
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_13"
+        tools:text="预计未来40天将出现16天降雨"
+        android:textColor="#7A7B7F"
+        android:textSize="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_day" />
+
+    <com.zhangsheng.shunxin.weather.widget.RulerView
+        android:id="@+id/rulerView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_describe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

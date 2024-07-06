@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">相雨天气</string>
+    <string name="comm_refresh_tips" translatable="false">为您更新了%1$s条新内容</string>
+    <string name="info_title">相雨资讯</string>
+    <string name="agree_enter">同意并进入</string>
+    <string name="disagree">不同意</string>
+    <string name="app_policy">感谢您使用我们的APP，我们非常重视您的个人信息保护和隐私安全。为了更好地保障您的个人权益，请您充分阅读并理解《用户服务协议》和《隐私政策》的全部内容，同意并接受全部条款后开始使用我们的产品和服务。</string>
+    <string name="app_policy_1">· 用于读写语音播报、动态天气背景;</string>
+    <string name="app_policy_2">· 用于精准获取您所在地的天气状态;</string>
+    <string name="app_policy_3">· 用于语音播报时可正常接听电话。</string>
+    <string name="wallpaper_name">相雨天气</string>
+
+
+    <string name="weather_voice_too_low">当前音量低，请及时调整音量！</string>
+    <string name="speak_app_title">相雨天气为您播报</string>
+</resources>

@@ -1,0 +1,19 @@
+
+{
+  "channelInfoList": [{
+      "channel": "xytqgf1",
+      "alias": "相雨天气",
+      "extraInfo": {
+      "time": null,
+      "checkTime": null,
+      "buildTime":null,
+      "tab_weather":null,
+      "tab_stream":null,
+      "tab_video":null,
+      "tab_calander":null,
+      "tab_setting":null,
+      "ctl_ad":null,
+      "wallpaper":"1"
+      }
+    }]
+}

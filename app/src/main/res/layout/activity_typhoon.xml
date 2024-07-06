@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    tools:context="com.zhangsheng.shunxin.weather.activity.WeatherMapActivity">
+
+    <com.maiya.thirdlibrary.widget.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.amap.api.maps.TextureMapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_222" />
+
+        <com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:visibility="invisible"
+            app:ll_BgColor="#80ffffff"
+            app:ll_TopLeftRadius="@dimen/dp_20"
+            app:ll_TopRightRadius="@dimen/dp_20"
+            tools:visibility="visible">
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:textColor="#FF4D16"
+                android:textSize="14dp"
+                app:IsPress="false"
+                app:bgColor="@color/white"
+                app:isRipple="false"
+                app:radius="12dp"
+                tools:text="台风中心距离您306公里，预计15小时12分钟到达" />
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeRelativeLayout
+                android:id="@+id/rl_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                app:BgColor="@color/white"
+                app:Radius="12dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp">
+
+                    <com.maiya.thirdlibrary.widget.shapview.ShapeView
+                        android:layout_width="5dp"
+                        android:layout_height="14dp"
+                        app:bgColor="#088EFF"
+                        app:radius="2.5dp" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#323232"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        tools:text="山竹" />
+
+                    <TextView
+                        android:id="@+id/strong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#353535"
+                        android:textSize="14dp"
+                        tools:text="热带风暴 8级" />
+
+                </LinearLayout>
+
+                <com.maiya.thirdlibrary.widget.smartlayout.recycleview.SmartRecycleView
+                    android:id="@+id/gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_layout"
+                    android:layout_marginBottom="12dp"
+                    app:LayoutManager="horizontal_grid"
+                    app:isScrollChild="true"
+                    app:item_count="2"
+                    app:item_layout="@layout/item_typhoon"
+                    app:vertical_divider="@drawable/shape_divider_8h" />
+
+            </com.maiya.thirdlibrary.widget.shapview.ShapeRelativeLayout>
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout
+                android:id="@+id/layout_no_typhoon"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:ll_Radius="12dp"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#323232"
+                    android:textSize="16dp"
+                    tools:text="2020/10/08" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:text="当前无台风"
+                    android:textColor="#323232"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout>
+        </com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout>
+
+        <LinearLayout
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_info"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:ll_BgColor="@color/white"
+                app:ll_Radius="8dp">
+
+                <ImageView
+                    android:id="@+id/zoom_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_typhoon_add" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="#ECECEC" />
+
+                <ImageView
+                    android:id="@+id/zoom_cut"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_typhoon_cut" />
+            </com.maiya.thirdlibrary.widget.shapview.ShapeLinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_location"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape8r_white"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_typhoon_location" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

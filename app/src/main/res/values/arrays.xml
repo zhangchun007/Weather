@@ -1,0 +1,87 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+
+    <declare-styleable name="BubbleView">
+        <attr name="BottleWidth" format="dimension" />
+        <attr name="BottleHeight" format="dimension" />
+        <attr name="BottleWaterHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="BubbleRiseView">
+        <attr name="bubbleMaxNum" format="integer" />
+        <attr name="bubbleMinAlpha" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="LuckyBubbleView">
+        <attr name="lucky_bubble_type" format="enum">
+            <enum name="gift" value="0" />
+            <enum name="video" value="1" />
+            <enum name="coin" value="2" />
+        </attr>
+        <attr name="lucky_bubble_hint_txt" format="string" />
+    </declare-styleable>
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+        <attr name="drawLeftUp" format="boolean" />
+        <attr name="drawLeftDown" format="boolean" />
+        <attr name="drawRightUp" format="boolean" />
+        <attr name="drawRightDown" format="boolean" />
+        <attr name="roundSize" format="dimension" />
+        <attr name="roundSizeLeftUp" format="dimension" />
+        <attr name="roundSizeLeftDown" format="dimension" />
+        <attr name="roundSizeRightUp" format="dimension" />
+        <attr name="roundSizeRightDown" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="backWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="progWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="textSize" format="dimension" />     <!--文字大小-->
+        <attr name="textColor" format="color" />        <!--文字颜色-->
+        <attr name="backColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="progColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="progStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="progFirstColor" format="color" />   <!--进度圆环结束颜色-->
+        <attr name="progress" format="integer" />       <!--圆环进度-->
+    </declare-styleable>
+
+    <declare-styleable name="CountCloseView">
+        <attr name="CountRoundColor" format="color" />
+        <attr name="CountContentColor" format="color" />
+        <attr name="CountDownColor" format="color" />
+        <attr name="CountSize" format="dimension" />
+        <attr name="CountContent" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerRelativeLayout">
+        <attr name="roundcorners" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="BannerControlView">
+        <attr name="bannerImageWidth" format="dimension" />
+        <attr name="bannerImageHeight" format="dimension" />
+        <attr name="bannerTextSize" format="dimension" />
+        <attr name="bannerTextViewWidth" format="dimension" />
+        <attr name="bannerTextViewHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerImageView">
+        <attr name="roundCornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <attr name="ratioX" format="integer" />
+    <attr name="ratioY" format="integer" />
+
+
+
+
+</resources>

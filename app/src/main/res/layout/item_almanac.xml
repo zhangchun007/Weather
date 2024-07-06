@@ -1,0 +1,514 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_6"
+    android:layout_marginRight="@dimen/dp_6"
+    android:orientation="vertical"
+    android:background="@drawable/shape_white_bg"
+    android:paddingBottom="@dimen/dp_12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_wx"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="106"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="五行"
+                android:textColor="#D13F3F"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_almanac_wx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:background="#fff3ede5" />
+
+        <LinearLayout
+            android:id="@+id/layout_chongsha"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="158"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="冲煞"
+                android:textColor="#D13F3F"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_almanac_cs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:background="#fff3ede5" />
+
+        <LinearLayout
+            android:id="@+id/layout_zhishen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="93"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="值神"
+                android:textColor="#D13F3F"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_almanac_zs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="15dp"
+        android:background="#F3EDE5" />
+
+    <LinearLayout
+        android:id="@+id/ll_hour_jx_cn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time_yiji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:ems="2"
+            android:text="时辰宜忌"
+            android:textColor="#D13F3F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_almanac_zi_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_chou_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_yin_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_mou_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_chen_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_si_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_wu_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_wei_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_shen_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_you_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_xu_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_almanac_hai_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="1"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#F3EDE5" />
+
+    <LinearLayout
+        android:id="@+id/layout_jc"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/layout_jangchu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="9dp"
+            android:layout_weight="60"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="1"
+                android:text="建除十二神"
+                android:textColor="#D13F3F"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_almanac_12shen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:ems="1"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="78dp"
+            android:background="#F3EDE5" />
+
+        <LinearLayout
+            android:id="@+id/layout_jieshen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="112"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="吉神宜趋"
+                android:textColor="#D13F3F"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_almanac_jsyq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:ems="4"
+                android:gravity="center_horizontal"
+                android:maxLines="2"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:background="#fff3ede5" />
+
+        <LinearLayout
+            android:id="@+id/layout_taishen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="127"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="今日胎神"
+                android:textColor="#D13F3F"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_almanac_jrts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:ems="4"
+                android:gravity="center_horizontal"
+                android:maxLines="2"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:background="#fff3ede5" />
+
+        <LinearLayout
+            android:id="@+id/layout_xiongshen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="112"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="凶神宜忌"
+                android:textColor="#D13F3F"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_almanac_xsyj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:ems="4"
+                android:gravity="center_horizontal"
+                android:maxLines="2"
+                android:textColor="#333333"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="78dp"
+            android:background="#F3EDE5" />
+
+        <LinearLayout
+            android:id="@+id/layout_xinxiu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:layout_weight="60"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="1"
+                android:text="二十八星宿"
+                android:textColor="#D13F3F"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_almanac_28star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:ems="1"
+                android:textColor="#333333"
+
+
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_pengzhu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-36dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginLeft="68dp"
+            android:layout_marginRight="67dp"
+            android:background="#F3EDE5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:text="彭祖百忌"
+            android:textColor="#D13F3F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/icon_almanac_pzbj_bg" />
+
+            <TextView
+                android:id="@+id/tv_almanac_pzbj"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="14dp" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

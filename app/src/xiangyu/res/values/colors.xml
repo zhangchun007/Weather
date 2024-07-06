@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="white">#fff</color>
+    <color name="black22_10">#1A222222</color>
+    <color name="divider">#F2F2F2</color>
+    <color name="backgroud">#F2F2F2</color>
+    <color name="color_333">#333</color>
+    <color name="color_999">#999</color>
+    <color name="color_379bff">#379BFF</color>
+    <color name="color_fe5044">#FE5044</color>
+    <color name="color_f2f2f2">#F2F2F2</color>
+    <color name="color_9296A0">#9296A0</color>
+    <color name="color_222">#222</color>
+    <color name="color_f6f6f6">#f6f6f6</color>
+    <color name="transparent">#00000000</color>
+    <color name="tv_gray_light">#9296A0</color>
+    <color name="bg_color">#F2F2F2</color>
+    <color name="color_222222">#222222</color>
+    <color name="color_076EFA">#076EFA</color>
+    <color name="color_76A6AD">#76A6AD</color>
+    <color name="color_2287F5">#2287F5</color>
+    <color name="color_EAEAEA">#EAEAEA</color>
+    <color name="color_E9EAEF">#E9EAEF</color>
+    <color name="color_BCC3D3">#BCC3D3</color>
+    <color name="color_CC000000">#CC000000</color>
+    <color name="color_F6F6F6">#F6F6F6</color>
+    <color name="color_FFE5E5E5F">#FFE5E5E5</color>
+    <color name="color_AAAAAA">#AAAAAA</color>
+    //信息流频道管理颜色
+    <item name="subscribe_item_text_color_normal" type="color">@color/default_text</item>
+    <color name="subscribe_item_text_color_pressed">#F4F5F9</color>
+    <color name="default_text">#222222</color>
+    <color name="subscribe_item_text_color_pressed_night">#ff303030</color>
+    <color name="subscribe_item_focused_stroke">#ffd9d9d9</color>
+    <color name="subscribe_item_drag_stroke">#ffd2d2d2</color>
+    <color name="subscribe_item_drag_bg">#ffffff</color>
+    <color name="subscribe_item_drag_stroke_night">#ff464646</color>
+    <color name="subscribe_item_drag_bg_night">#ff252525</color>
+    <color name="subscribe_item_selected_bg">#ffffffff</color>
+    <color name="subscribe_item_selected_stroke">#F4F5F9</color>
+    <color name="subscribe_item_disabled_bg">#ffefefef</color>
+    <color name="subscribe_item_disabled_stroke">#ffd9d9d9</color>
+    <color name="subscribe_item_pressed_bg">#fff9f9f9</color>
+    <color name="subscribe_item_pressed_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_normal_bg">#fff5f5f5</color>
+    <color name="subscribe_item_normal_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_focused_bg_night">#ff252525</color>
+    <color name="subscribe_item_focused_stroke_night">#ff464646</color>
+    <color name="subscribe_item_selected_bg_night">#ff252525</color>
+    <color name="subscribe_item_selected_stroke_night">#ffbc494d</color>
+    <color name="subscribe_item_disabled_bg_night">#ff2b2b2b</color>
+
+</resources>

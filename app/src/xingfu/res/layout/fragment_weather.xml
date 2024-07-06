@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/weather_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_home_weatner_day_bg"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/weather_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/weather_bg"
+        android:background="#FF98E6FF" />
+
+    <FrameLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000">
+
+        <RelativeLayout
+            android:id="@+id/title_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ad_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_10"
+                android:src="@mipmap/icon_local_add" />
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="幸福天气"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <ImageView
+                    android:id="@+id/icon_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:src="@mipmap/icon_location"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+            </LinearLayout>
+
+            <com.maiya.thirdlibrary.widget.smartlayout.recycleview.SmartRecycleView
+                android:id="@+id/tab_view"
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"
+                android:layout_below="@+id/lin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                app:LayoutManager="horizontal"
+                app:item_layout="@layout/item_tab_small" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/speak"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_toLeftOf="@+id/setting"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true" />
+
+            <ImageView
+                android:id="@+id/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:padding="@dimen/dp_10"
+                android:src="@mipmap/icon_setting" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <com.zhangsheng.shunxin.weather.widget.CustomSmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar">
+
+        <com.zhangsheng.shunxin.weather.widget.refresh.WeatherRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.zhangsheng.shunxin.weather.widget.CustomViewPager1
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </com.zhangsheng.shunxin.weather.widget.CustomSmartRefreshLayout>
+
+    <com.zhangsheng.shunxin.weather.widget.refresh.RefreshStatusView
+        android:id="@+id/refresh_status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_4" />
+
+</RelativeLayout>

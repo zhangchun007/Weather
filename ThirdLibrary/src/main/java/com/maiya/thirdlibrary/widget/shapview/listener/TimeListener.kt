@@ -1,0 +1,1 @@
+package com.maiya.thirdlibrary.widget.shapview.listener/** * Created by Quan on 2018/9/5 0005 10:15 * E-Mail Address：672114236@qq.com */interface TimeListener {    fun onTimeChanged(second: Long)}

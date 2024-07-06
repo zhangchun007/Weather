@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/adActionContainer"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/adv_small_icon_des_close"
+            android:layout_width="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_5"
+            android:layout_height="@dimen/dp_15"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_ad_close" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/adv_small_icon_des_close"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/shape8r_white"
+            android:layout_height="56dp">
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="@dimen/dp_48"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:layout_height="@dimen/dp_48">
+                <com.xinmeng.shadow.mediation.view.RoundImageView
+                    android:id="@+id/adv_icon_view"
+                    android:layout_width="match_parent"
+                    app:cornerRadius="12dp"
+                    android:layout_height="match_parent" />
+                <com.xinmeng.shadow.mediation.display.MediaView
+                    android:id="@+id/adv_media_view"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+                <com.zhangsheng.shunxin.weather.widget.circleimage.NiceImageView
+                    android:id="@+id/label_s1"
+                    android:layout_width="@dimen/dp_23"
+                    android:layout_height="@dimen/dp_8"
+                    android:layout_gravity="right|bottom"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/adv_title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/frame"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#333"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</merge>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/tab_item_width"
+    android:layout_height="5dp"
+    android:orientation="vertical">
+
+
+    <com.maiya.thirdlibrary.widget.shapview.ShapeView
+        android:id="@+id/tab"
+        android:layout_width="@dimen/tab_item_icon"
+        android:layout_height="@dimen/tab_item_icon"
+        app:bgColor="#33ffffff"
+        app:radius="@dimen/tab_item_icon" />
+</LinearLayout>

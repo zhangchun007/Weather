@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.4.21"
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.aliyun.com/repository/google' } //google 国内镜像仓
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' } //gradle 国内镜像仓
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+
+        //壁纸保活
+//        maven { url 'http://172.18.61.14:8081/repository/maven-public/' } // 仓库
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        //walle
+        classpath 'com.meituan.android.walle:plugin:1.1.7'
+
+        //防爆插件
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        classpath 'com.github.Binary-0001:RenamePlugin:v2.0.1'
+
+        if (gradle.IS_CSJ_VIDEO_TRACKER=='true'){
+            //news
+            classpath 'com.bytedance.applog:RangersAppLog-All-plugin:5.2.5'
+        }
+
+    }
+}
+
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.aliyun.com/repository/google' } //google 国内镜像仓
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' } //gradle 国内镜像仓
+
+        //壁纸保活
+        maven { url 'http://172.18.61.14:8081/repository/maven-public/' } // 仓库
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
